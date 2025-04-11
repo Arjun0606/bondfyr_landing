@@ -366,72 +366,80 @@ header.sticky {
 /* Footer Styles */
 footer {
     background-color: var(--secondary-color);
+    color: #fff;
     padding: 50px 0 20px;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-column {
+    padding: 0 15px;
 }
 
 .footer-column h3 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
     position: relative;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
 }
 
 .footer-column h3::after {
     content: '';
     position: absolute;
-    bottom: -10px;
     left: 0;
-    width: 50px;
+    right: 0;
+    margin: 0 auto;
+    bottom: -8px;
+    width: 40px;
     height: 2px;
     background-color: var(--primary-color);
 }
 
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer-links a {
-    display: block;
-    color: #E0E0E0;
+    color: #fff;
     text-decoration: none;
     margin-bottom: 10px;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 .footer-links a:hover {
     color: var(--primary-color);
+    opacity: 1;
 }
 
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    display: inline-block;
-    color: var(--text-color);
-    background-color: #333;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    transition: all 0.3s;
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
+.footer-links a i {
+    margin-right: 8px;
 }
 
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 0.9rem;
-    color: #999;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    opacity: 0.7;
 }
 
 /* Animation Styles */
@@ -487,6 +495,19 @@ footer {
     
     .about-image {
         width: 100%;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        padding: 0;
+    }
+    
+    .footer-column p {
+        max-width: 100%;
     }
 }
 
