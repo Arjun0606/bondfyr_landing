@@ -26,4 +26,8 @@ logs/
 
 # Build directories
 dist/
-build/ 
+build/
+
+# Add exception for the images directory
+!images/
+!images/* 
