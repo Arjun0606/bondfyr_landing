@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.npm
+
+# IDE/Editor folders
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+
+# Logs
+logs/
+*.log
+
+# Build directories
+dist/
+build/ 
