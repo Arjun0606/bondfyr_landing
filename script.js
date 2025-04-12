@@ -39,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Scroll animations
     setupScrollAnimations();
+    
+    // Try to resend any failed submissions
+    retryFailedSubmissions();
 });
 
 // Form validation
@@ -60,21 +63,22 @@ function validateForm(name, email) {
 
 // Store form data
 function storeFormData(name, email, suggestion) {
-    // Store data in localStorage for future use or until a backend is implemented
+    // Store data in localStorage as a backup
     const submissions = JSON.parse(localStorage.getItem('bondfyrSubmissions') || '[]');
-    submissions.push({ 
+    const submission = { 
         name, 
         email, 
         suggestion, 
         timestamp: new Date().toISOString() 
-    });
+    };
+    submissions.push(submission);
     localStorage.setItem('bondfyrSubmissions', JSON.stringify(submissions));
     
-    // Log for debug purposes
-    console.log("Form submitted:", { name, email, suggestion });
+    // Send data to database via API
+    sendToDatabase(submission);
     
-    // In the future, this function can be updated to send data to Firebase
-    // sendToFirebase(name, email, suggestion);
+    // Log for debug purposes
+    console.log("Form submitted:", submission);
 }
 
 // Show success message
@@ -82,11 +86,8 @@ function showSuccessMessage(form, successMessage) {
     form.style.display = 'none';
     successMessage.style.display = 'block';
     
-    // Hide success message after 5 seconds and show form again
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-        form.style.display = 'block';
-    }, 5000);
+    // Keep the success message displayed
+    // It won't automatically revert to the form
 }
 
 // Setup smooth scrolling for anchor links
@@ -162,6 +163,151 @@ function setupScrollAnimations() {
     document.querySelectorAll('.feature-card, .service-card, .guideline-card, .section-title, .section-subtitle').forEach(element => {
         observer.observe(element);
     });
+}
+
+// Send data to backend database
+function sendToDatabase(formData) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+    
+    return fetch('https://x8ki-letl-twmt.n7.xano.io/api:qy9dSsak/waitlist', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData),
+        signal: controller.signal
+    })
+    .then(response => {
+        clearTimeout(timeoutId);
+        
+        if (!response.ok) {
+            return response.text().then(text => {
+                throw new Error(`Server error: ${response.status} - ${text || 'No error message'}`);
+            });
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Show success message
+        displaySuccessMessage(formData.email);
+        return data;
+    })
+    .catch(error => {
+        console.error('Submission failed:', error.message);
+        
+        // Store the failed submission
+        storeFailedSubmission(formData);
+        
+        // Display error to user
+        const formElement = document.getElementById('waitlist-form');
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.textContent = 'Unable to submit form due to a network error. We\'ll automatically retry when your connection improves.';
+        formElement.appendChild(errorMessage);
+        
+        setTimeout(() => {
+            errorMessage.remove();
+        }, 5000);
+        
+        throw error;
+    });
+}
+
+function displaySuccessMessage(email) {
+    // Hide the form
+    const formElement = document.getElementById('waitlist-form');
+    formElement.style.display = 'none';
+    
+    // Create success message container
+    const successMessage = document.createElement('div');
+    successMessage.className = 'success-message';
+    
+    // Add icon (using entity for simplicity, but you could use Font Awesome or similar)
+    const icon = document.createElement('i');
+    icon.innerHTML = '&#10004;'; // Checkmark
+    successMessage.appendChild(icon);
+    
+    // Add heading
+    const heading = document.createElement('h3');
+    heading.textContent = 'You\'re on the waitlist!';
+    successMessage.appendChild(heading);
+    
+    // Add message
+    const message = document.createElement('p');
+    message.textContent = `Thanks for joining! We've added ${email} to our waitlist.`;
+    successMessage.appendChild(message);
+    
+    const subMessage = document.createElement('p');
+    subMessage.textContent = 'We\'ll notify you as soon as Bondfyr is ready.';
+    successMessage.appendChild(subMessage);
+    
+    // Insert success message
+    formElement.parentNode.insertBefore(successMessage, formElement);
+    
+    // Show success message with animation
+    setTimeout(() => {
+        successMessage.style.display = 'block';
+    }, 100);
+}
+
+// Store failed submissions for later retry
+function storeFailedSubmission(data) {
+    const failedSubmissions = JSON.parse(localStorage.getItem('bondfyrFailedSubmissions') || '[]');
+    failedSubmissions.push({
+        data: data,
+        timestamp: new Date().toISOString()
+    });
+    localStorage.setItem('bondfyrFailedSubmissions', JSON.stringify(failedSubmissions));
+    
+    // Set up retry on next page load
+    localStorage.setItem('bondfyrShouldRetry', 'true');
+}
+
+// Retry sending failed submissions
+function retryFailedSubmissions() {
+    const shouldRetry = localStorage.getItem('bondfyrShouldRetry');
+    if (shouldRetry !== 'true') return;
+    
+    const failedSubmissions = JSON.parse(localStorage.getItem('bondfyrFailedSubmissions') || '[]');
+    if (failedSubmissions.length === 0) {
+        localStorage.removeItem('bondfyrShouldRetry');
+        return;
+    }
+    
+    console.log(`Attempting to resend ${failedSubmissions.length} failed submissions`);
+    
+    // Try to send each failed submission again
+    const remainingSubmissions = failedSubmissions.filter(item => {
+        // Only retry submissions less than 7 days old
+        const submissionDate = new Date(item.timestamp);
+        const now = new Date();
+        const daysDifference = (now - submissionDate) / (1000 * 60 * 60 * 24);
+        
+        if (daysDifference > 7) return false;
+        
+        // Try to send it again
+        try {
+            fetch('https://api.bondfyr.com/submissions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(item.data)
+            });
+            return false; // Remove from the retry list
+        } catch (error) {
+            return true; // Keep in the retry list
+        }
+    });
+    
+    // Update localStorage with remaining failed submissions
+    localStorage.setItem('bondfyrFailedSubmissions', JSON.stringify(remainingSubmissions));
+    if (remainingSubmissions.length === 0) {
+        localStorage.removeItem('bondfyrShouldRetry');
+    }
 }
 
 // Function to send data to Firebase (placeholder for future implementation)

@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/bondfyr-logo.png">
+    <link rel="icon" href="images/bondfyr-logo-transparent.png">
     <meta name="description" content="Bondfyr - The ultimate nightlife platform that connects users with events, venues, and each other. Discover and enjoy the best nightlife experiences.">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <header>
         <div class="container navbar">
             <div class="logo">
-                <img src="images/bondfyr-logo.png" alt="Bondfyr Logo">
+                <img src="images/bondfyr-logo-transparent.png" alt="Bondfyr Logo">
                 <h1>Bondfyr</h1>
             </div>
             <nav class="nav-links">
@@ -32,6 +32,183 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-animation">
+            <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background gradient -->
+                <defs>
+                    <radialGradient id="crowd-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
+                        <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
+                        <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
+                    </radialGradient>
+                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur stdDeviation="10" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                </defs>
+                
+                <!-- Dark gradient background -->
+                <rect x="0" y="0" width="1200" height="800" fill="url(#crowd-gradient)" />
+                
+                <!-- Stage lights -->
+                <g class="stage-lights">
+                    <circle cx="300" cy="100" r="30" fill="#FF1A47" opacity="0.7" class="light" />
+                    <circle cx="600" cy="70" r="40" fill="#FFA500" opacity="0.7" class="light" />
+                    <circle cx="900" cy="120" r="25" fill="#9C27B0" opacity="0.7" class="light" />
+                    <circle cx="450" cy="90" r="20" fill="#2196F3" opacity="0.7" class="light" />
+                    <circle cx="750" cy="80" r="35" fill="#E91E63" opacity="0.7" class="light" />
+                </g>
+                
+                <!-- Light beams -->
+                <g class="light-beams">
+                    <path d="M300,100 L200,800" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="beam" />
+                    <path d="M300,100 L400,800" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="beam" />
+                    
+                    <path d="M600,70 L400,800" stroke="#FFA500" stroke-width="2" opacity="0.3" class="beam" />
+                    <path d="M600,70 L800,800" stroke="#FFA500" stroke-width="2" opacity="0.3" class="beam" />
+                    
+                    <path d="M900,120 L700,800" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="beam" />
+                    <path d="M900,120 L1000,800" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="beam" />
+                </g>
+                
+                <!-- Crowd silhouettes -->
+                <g class="crowd">
+                    <!-- Row 1 -->
+                    <g transform="translate(0, 650)">
+                        <circle cx="100" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="160" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="220" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="280" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="340" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="400" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="460" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="520" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="580" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="640" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="700" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="760" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="820" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="880" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="940" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="1000" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="1060" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="1120" cy="0" r="30" fill="#000" class="person" />
+                    </g>
+                    
+                    <!-- Row 2 -->
+                    <g transform="translate(30, 700)">
+                        <circle cx="100" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="160" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="220" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="280" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="340" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="400" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="460" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="520" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="580" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="640" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="700" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="760" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="820" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="880" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="940" cy="0" r="30" fill="#000" class="person" />
+                        <circle cx="1000" cy="0" r="30" fill="#000" class="person" />
+                    </g>
+                    
+                    <!-- Row 3 (raised hands) -->
+                    <g transform="translate(60, 600)">
+                        <g class="dancing-person">
+                            <circle cx="130" cy="0" r="25" fill="#000" />
+                            <path d="M110,-15 L90,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M150,-15 L170,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="250" cy="0" r="25" fill="#000" />
+                            <path d="M230,-15 L210,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M270,-15 L290,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="370" cy="0" r="25" fill="#000" />
+                            <path d="M350,-15 L330,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M390,-15 L410,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="490" cy="0" r="25" fill="#000" />
+                            <path d="M470,-15 L450,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M510,-15 L530,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="610" cy="0" r="25" fill="#000" />
+                            <path d="M590,-15 L570,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M630,-15 L650,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="730" cy="0" r="25" fill="#000" />
+                            <path d="M710,-15 L690,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M750,-15 L770,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="850" cy="0" r="25" fill="#000" />
+                            <path d="M830,-15 L810,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M870,-15 L890,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                        <g class="dancing-person">
+                            <circle cx="970" cy="0" r="25" fill="#000" />
+                            <path d="M950,-15 L930,-45" stroke="#000" stroke-width="8" class="arm" />
+                            <path d="M990,-15 L1010,-45" stroke="#000" stroke-width="8" class="arm" />
+                        </g>
+                    </g>
+                </g>
+                
+                <!-- People Queue -->
+                <g class="people-queue">
+                    <!-- Queue of people leading to right side -->
+                    <g transform="translate(50, 550)">
+                        <circle cx="0" cy="0" r="15" fill="#000" class="queue-person" />
+                        <circle cx="40" cy="0" r="15" fill="#000" class="queue-person" />
+                        <circle cx="80" cy="-5" r="15" fill="#000" class="queue-person" />
+                        <circle cx="120" cy="-5" r="15" fill="#000" class="queue-person" />
+                        <circle cx="160" cy="-8" r="15" fill="#000" class="queue-person" />
+                        <circle cx="200" cy="-10" r="15" fill="#000" class="queue-person" />
+                        <circle cx="240" cy="-15" r="15" fill="#000" class="queue-person" />
+                        <circle cx="280" cy="-18" r="15" fill="#000" class="queue-person" />
+                        <circle cx="320" cy="-20" r="15" fill="#000" class="queue-person" />
+                        <circle cx="360" cy="-25" r="15" fill="#000" class="queue-person" />
+                        
+                        <!-- Velvet rope -->
+                        <line x1="-20" y1="25" x2="390" y2="-35" stroke="#E91E63" stroke-width="3" />
+                        <circle cx="-20" cy="25" r="5" fill="#E91E63" />
+                        <circle cx="390" cy="-35" r="5" fill="#E91E63" />
+                        
+                        <!-- Rope posts -->
+                        <rect x="-25" y="25" width="10" height="30" fill="#333" />
+                        <rect x="385" y="-35" width="10" height="30" fill="#333" />
+                        
+                        <!-- Bouncer -->
+                        <g transform="translate(420, -35)">
+                            <circle cx="0" cy="0" r="20" fill="#333" />
+                            <rect x="-12" y="20" width="24" height="35" rx="5" fill="#333" />
+                            <line x1="-12" y1="30" x2="-30" y2="35" stroke="#333" stroke-width="6" />
+                            <line x1="12" y1="30" x2="30" y2="35" stroke="#333" stroke-width="6" />
+                        </g>
+                    </g>
+                </g>
+                
+                <!-- Music notes -->
+                <g class="music-notes">
+                    <path d="M400,380 Q420,350 430,380" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
+                    <circle cx="430" cy="380" r="8" fill="#fff" class="note" />
+                    
+                    <path d="M500,320 Q520,290 530,320" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
+                    <circle cx="530" cy="320" r="8" fill="#fff" class="note" />
+                    
+                    <path d="M680,350 Q700,320 710,350" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
+                    <circle cx="710" cy="350" r="8" fill="#fff" class="note" />
+                    
+                    <path d="M780,400 Q800,370 810,400" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
+                    <circle cx="810" cy="400" r="8" fill="#fff" class="note" />
+                </g>
+            </svg>
+        </div>
         <div class="container hero-content">
             <h1 class="animated">Revolutionize Your Nightlife Experience with Bondfyr</h1>
             <p class="animated" style="animation-delay: 0.2s;">Connect, Discover, and Enjoy the Best Nightlife has to Offer</p>
@@ -55,67 +232,176 @@
                 <div class="about-image">
                     <div class="animated-illustration">
                         <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                            <!-- City background -->
-                            <rect x="0" y="200" width="600" height="200" fill="#1a1a2e" />
-                            <!-- Buildings -->
-                            <rect x="50" y="100" width="80" height="300" fill="#16213e" />
-                            <rect x="150" y="150" width="60" height="250" fill="#0f3460" />
-                            <rect x="230" y="180" width="100" height="220" fill="#16213e" />
-                            <rect x="350" y="120" width="70" height="280" fill="#0f3460" />
-                            <rect x="440" y="160" width="90" height="240" fill="#16213e" />
+                            <!-- Background gradient -->
+                            <defs>
+                                <radialGradient id="about-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
+                                    <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
+                                    <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
+                                </radialGradient>
+                                <filter id="about-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="10" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <linearGradient id="speaker-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#333" />
+                                    <stop offset="100%" stop-color="#111" />
+                                </linearGradient>
+                            </defs>
                             
-                            <!-- Windows with animation -->
-                            <g class="windows-group">
-                                <rect x="65" y="130" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="95" y="130" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="65" y="160" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="95" y="160" width="15" height="15" fill="#e94560" class="window" />
-                                
-                                <rect x="165" y="180" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="180" y="210" width="15" height="15" fill="#e94560" class="window" />
-                                
-                                <rect x="250" y="200" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="280" y="200" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="310" y="200" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="250" y="230" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="280" y="230" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="310" y="230" width="15" height="15" fill="#e94560" class="window" />
-                                
-                                <rect x="365" y="150" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="390" y="150" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="365" y="180" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="390" y="180" width="15" height="15" fill="#e94560" class="window" />
-                                
-                                <rect x="460" y="190" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="490" y="190" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="460" y="220" width="15" height="15" fill="#e94560" class="window" />
-                                <rect x="490" y="220" width="15" height="15" fill="#e94560" class="window" />
+                            <!-- Dark gradient background -->
+                            <rect x="0" y="0" width="600" height="400" fill="url(#about-gradient)" />
+                            
+                            <!-- Massive left speaker -->
+                            <g class="left-speaker" transform="translate(80, 200)">
+                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
+                                <!-- Speaker cones -->
+                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <!-- Speaker dust cap -->
+                                <circle cx="0" cy="-60" r="10" fill="#111" />
+                                <circle cx="0" cy="20" r="15" fill="#111" />
+                                <!-- Speaker bass port -->
+                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
                             </g>
                             
-                            <!-- Club entrance -->
-                            <rect x="260" y="320" width="60" height="80" fill="#0f3460" />
-                            <rect x="270" y="330" width="40" height="70" fill="#e94560" />
+                            <!-- Massive right speaker -->
+                            <g class="right-speaker" transform="translate(520, 200)">
+                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
+                                <!-- Speaker cones -->
+                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <!-- Speaker dust cap -->
+                                <circle cx="0" cy="-60" r="10" fill="#111" />
+                                <circle cx="0" cy="20" r="15" fill="#111" />
+                                <!-- Speaker bass port -->
+                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
+                            </g>
                             
-                            <!-- People in line -->
-                            <circle cx="200" cy="370" r="10" fill="#fff" class="person" />
-                            <circle cx="220" cy="370" r="10" fill="#fff" class="person" />
-                            <circle cx="240" cy="370" r="10" fill="#fff" class="person" />
+                            <!-- DJ Booth -->
+                            <g class="dj-booth" transform="translate(300, 240)">
+                                <!-- Main console -->
+                                <rect x="-120" y="-40" width="240" height="70" rx="5" fill="#222" stroke="#444" stroke-width="2" />
+                                
+                                <!-- CDJ decks -->
+                                <rect x="-90" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
+                                <rect x="20" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
+                                
+                                <!-- Mixer in the middle -->
+                                <rect x="-25" y="-30" width="50" height="60" rx="3" fill="#181818" stroke="#333" stroke-width="1" />
+                                
+                                <!-- Turntable platters -->
+                                <circle cx="-55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
+                                <circle cx="55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
+                                
+                                <!-- Control knobs and buttons -->
+                                <circle cx="-55" cy="-15" r="10" fill="#111" />
+                                <circle cx="55" cy="-15" r="10" fill="#111" />
+                                
+                                <!-- Mixer controls -->
+                                <rect x="-15" y="-20" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="-5" y="-25" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="5" y="-18" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="15" y="-22" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                
+                                <!-- Control lights -->
+                                <circle cx="-80" cy="-25" r="4" fill="#FF1A47" class="dj-light" />
+                                <circle cx="-70" cy="-25" r="4" fill="#3F51B5" class="dj-light" />
+                                <circle cx="-60" cy="-25" r="4" fill="#4CAF50" class="dj-light" />
+                                <circle cx="60" cy="-25" r="4" fill="#FF9800" class="dj-light" />
+                                <circle cx="70" cy="-25" r="4" fill="#9C27B0" class="dj-light" />
+                                <circle cx="80" cy="-25" r="4" fill="#F44336" class="dj-light" />
+                            </g>
                             
-                            <!-- Flame logo above club -->
-                            <g transform="translate(290, 290) scale(0.3)" class="pulse-logo">
-                                <path fill="#FF1A47" d="M100 20c-2 20-10 35-25 42 30 5 36-1 25-22 10 21 25 27 55 22-15 7-23 22-25 42-15-6-40-12-55-10 15-2 40-8 55-14-30-5-36 2-25 23-10-21-25-28-55-23 15-7 23-22 25-42Z"/>
+                            <!-- DJ Figure -->
+                            <g class="dj-figure" transform="translate(300, 150)">
+                                <!-- Head with headphones -->
+                                <circle cx="0" cy="0" r="20" fill="#444" />
+                                <path d="M-25 -5 Q-30 -20, -20 -20 L-5 -20 Q0 -25, 5 -20 L20 -20 Q30 -20, 25 -5" fill="#FF1A47" class="headphones" />
+                                
+                                <!-- Upper body -->
+                                <rect x="-15" y="20" width="30" height="40" rx="5" fill="#333" />
+                                
+                                <!-- Arms -->
+                                <g class="dj-arms">
+                                    <path d="M-15,30 C-40,20 -50,40 -45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
+                                    <path d="M15,30 C40,20 50,40 45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
+                                </g>
+                                
+                                <!-- Hands on equipment -->
+                                <circle cx="-45" cy="60" r="6" fill="#444" class="dj-hand" />
+                                <circle cx="45" cy="60" r="6" fill="#444" class="dj-hand" />
+                            </g>
+                            
+                            <!-- Signboard with Bondfyr logo behind DJ -->
+                            <g class="signboard" transform="translate(300, 50)">
+                                <rect x="-70" y="-30" width="140" height="60" rx="5" fill="#111" stroke="#333" stroke-width="2" />
+                                <g transform="scale(0.25)" class="sign-logo">
+                                    <image href="images/bondfyr_logo_zoomed_transparent_3x.png" width="200" height="200" x="-100" y="-100" />
+                                </g>
+                            </g>
+                            
+                            <!-- Sound waves emanating from speakers -->
+                            <g class="sound-waves">
+                                <path d="M80,140 Q100,160 80,180 Q60,200 80,220 Q100,240 80,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="left-wave" />
+                                <path d="M80,150 Q110,180 80,210 Q50,240 80,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="left-wave" />
+                                
+                                <path d="M520,140 Q500,160 520,180 Q540,200 520,220 Q500,240 520,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="right-wave" />
+                                <path d="M520,150 Q490,180 520,210 Q550,240 520,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="right-wave" />
+                            </g>
+                            
+                            <!-- Bass waves from speakers -->
+                            <g class="bass-waves">
+                                <circle cx="80" cy="200" r="60" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
+                                <circle cx="80" cy="200" r="80" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
+                                
+                                <circle cx="520" cy="200" r="60" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
+                                <circle cx="520" cy="200" r="80" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
+                            </g>
+                            
+                            <!-- Confetti particles -->
+                            <g class="confetti">
+                                <rect x="150" y="50" width="5" height="5" fill="#FF1A47" class="confetti-particle" />
+                                <rect x="200" y="80" width="5" height="5" fill="#4CAF50" class="confetti-particle" />
+                                <rect x="250" y="60" width="5" height="5" fill="#3F51B5" class="confetti-particle" />
+                                <rect x="300" y="70" width="5" height="5" fill="#FF9800" class="confetti-particle" />
+                                <rect x="350" y="50" width="5" height="5" fill="#9C27B0" class="confetti-particle" />
+                                <rect x="400" y="80" width="5" height="5" fill="#F44336" class="confetti-particle" />
+                                <rect x="450" y="60" width="5" height="5" fill="#FFEB3B" class="confetti-particle" />
+                                <circle cx="180" cy="70" r="3" fill="#FF1A47" class="confetti-particle" />
+                                <circle cx="230" cy="50" r="3" fill="#4CAF50" class="confetti-particle" />
+                                <circle cx="280" cy="80" r="3" fill="#3F51B5" class="confetti-particle" />
+                                <circle cx="330" cy="60" r="3" fill="#FF9800" class="confetti-particle" />
+                                <circle cx="380" cy="70" r="3" fill="#9C27B0" class="confetti-particle" />
+                                <circle cx="430" cy="50" r="3" fill="#F44336" class="confetti-particle" />
+                            </g>
+                            
+                            <!-- Spark effect from DJ console -->
+                            <g class="dj-sparks">
+                                <line x1="280" y1="210" x2="270" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
+                                <line x1="290" y1="215" x2="285" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
+                                <line x1="300" y1="212" x2="300" y2="185" stroke="#FFEB3B" stroke-width="1" class="spark" />
+                                <line x1="310" y1="215" x2="315" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
+                                <line x1="320" y1="210" x2="330" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
+                            </g>
+                            
+                            <!-- Spotlights from ceiling -->
+                            <g class="spotlights">
+                                <path d="M150,0 L200,180" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="spotlight-beam" />
+                                <path d="M300,0 L300,150" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="spotlight-beam" />
+                                <path d="M450,0 L400,180" stroke="#3F51B5" stroke-width="2" opacity="0.3" class="spotlight-beam" />
+                                
+                                <circle cx="150" cy="10" r="10" fill="#FF1A47" opacity="0.7" class="spotlight" />
+                                <circle cx="300" cy="10" r="10" fill="#9C27B0" opacity="0.7" class="spotlight" />
+                                <circle cx="450" cy="10" r="10" fill="#3F51B5" opacity="0.7" class="spotlight" />
                             </g>
                             
                             <!-- Music notes -->
                             <g class="music-notes">
-                                <path d="M380,280 Q390,260 400,280" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                                <circle cx="400" cy="280" r="5" fill="#fff" class="note" />
+                                <path d="M150,100 Q170,80 180,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
+                                <circle cx="180" cy="100" r="5" fill="#fff" class="note" />
                                 
-                                <path d="M420,260 Q430,240 440,260" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                                <circle cx="440" cy="260" r="5" fill="#fff" class="note" />
-                                
-                                <path d="M400,240 Q410,220 420,240" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                                <circle cx="420" cy="240" r="5" fill="#fff" class="note" />
+                                <path d="M450,100 Q430,80 420,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
+                                <circle cx="420" cy="100" r="5" fill="#fff" class="note" />
                             </g>
                         </svg>
                     </div>
@@ -228,9 +514,11 @@
                     </div>
                     <button type="submit" class="submit-button">Submit Suggestion</button>
                 </form>
-                <div id="success-message" style="display: none; text-align: center; margin-top: 20px; padding: 15px; background-color: rgba(0, 200, 83, 0.2); border-radius: 5px;">
-                    <i class="fas fa-check-circle" style="color: #00C853; font-size: 24px; margin-bottom: 10px;"></i>
-                    <p>Thank you for your suggestion! We'll keep you updated on Bondfyr's progress.</p>
+                <div id="success-message" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background-color: rgba(0, 200, 83, 0.1); border-radius: 8px; border: 1px solid #00C853; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-check-circle" style="color: #00C853; font-size: 36px; margin-bottom: 15px; display: block;"></i>
+                    <h3 style="color: #00C853; margin-bottom: 10px;">Thank You!</h3>
+                    <p style="font-size: 16px; line-height: 1.5;">Your suggestion has been submitted successfully and stored in our database.</p>
+                    <p style="font-size: 14px; margin-top: 10px;">We'll keep you updated on Bondfyr's progress via email.</p>
                 </div>
             </div>
         </div>
