@@ -315,3 +315,329 @@ function sendToFirebase(name, email, suggestion) {
     // This function can be implemented later when Firebase is set up
     // Firebase functionality will go here
 } 
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuIcon && navLinks) {
+        mobileMenuIcon.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when clicking on a link
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// How It Works Tab Functionality
+function initializeHowItWorksTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+}
+
+// Legal Pages Tab Functionality
+function initializeLegalTabs() {
+    const legalTabButtons = document.querySelectorAll('.legal-tab-button');
+    const legalTabContents = document.querySelectorAll('.legal-tab-content');
+
+    legalTabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            legalTabButtons.forEach(btn => btn.classList.remove('active'));
+            legalTabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+}
+
+// Initialize all tabs when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeHowItWorksTabs();
+    initializeLegalTabs();
+});
+
+// Header Background on Scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(10, 10, 10, 0.98)';
+    } else {
+        header.style.background = 'rgba(10, 10, 10, 0.95)';
+    }
+});
+
+// Intersection Observer for Animation on Scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all cards and sections for animation
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedElements = document.querySelectorAll(
+        '.feature-card, .safety-card, .step-card, .business-card, .app-feature, .category-card, .contact-card, .flow-step'
+    );
+    
+    animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+    });
+});
+
+// Trust Indicators Animation
+function animateTrustIndicators() {
+    const trustItems = document.querySelectorAll('.trust-item');
+    trustItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, index * 200);
+    });
+}
+
+// Hero Animation on Load
+window.addEventListener('load', function() {
+    const heroText = document.querySelector('.hero-text');
+    const heroImage = document.querySelector('.hero-image');
+    
+    if (heroText) {
+        heroText.style.opacity = '1';
+        heroText.style.transform = 'translateY(0)';
+    }
+    
+    if (heroImage) {
+        heroImage.style.opacity = '1';
+        heroImage.style.transform = 'translateX(0)';
+    }
+    
+    // Animate trust indicators after hero loads
+    setTimeout(animateTrustIndicators, 800);
+});
+
+// Payment Flow Steps Animation
+function animatePaymentFlow() {
+    const flowSteps = document.querySelectorAll('.flow-step');
+    flowSteps.forEach((step, index) => {
+        setTimeout(() => {
+            step.style.opacity = '1';
+            step.style.transform = 'translateY(0) scale(1)';
+        }, index * 300);
+    });
+}
+
+// Trigger payment flow animation when section comes into view
+const paymentSection = document.querySelector('.payment-security');
+if (paymentSection) {
+    const paymentObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animatePaymentFlow();
+                paymentObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    paymentObserver.observe(paymentSection);
+}
+
+// Mobile Menu Styles
+const style = document.createElement('style');
+style.textContent = `
+    @media (max-width: 768px) {
+        .nav-links {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(10px);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 50px;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+        
+        .nav-links.active {
+            right: 0;
+        }
+        
+        .nav-links a {
+            margin: 20px 0;
+            font-size: 1.2rem;
+        }
+        
+        .cta-button {
+            margin-top: 30px;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Particle Effect for Hero Section (Optional Enhancement)
+function createParticles() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #FF1A47;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.5;
+            animation: float 6s infinite linear;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation-delay: ${Math.random() * 6}s;
+        `;
+        hero.appendChild(particle);
+    }
+}
+
+// Add particle animation keyframes
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    @keyframes float {
+        0% {
+            transform: translateY(100px) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.5;
+        }
+        90% {
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(-100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(particleStyle);
+
+// Initialize particles on load
+window.addEventListener('load', createParticles);
+
+// Form Validation and Enhancement (if forms are added later)
+function enhanceForm(formSelector) {
+    const form = document.querySelector(formSelector);
+    if (!form) return;
+    
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.classList.remove('focused');
+            }
+        });
+    });
+}
+
+// Download Button Click Tracking (Analytics placeholder)
+document.addEventListener('DOMContentLoaded', function() {
+    const downloadButtons = document.querySelectorAll('.download-btn');
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Add analytics tracking here if needed
+            console.log('Download button clicked:', this.textContent);
+        });
+    });
+});
+
+// Email Link Click Tracking
+document.addEventListener('DOMContentLoaded', function() {
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            console.log('Email link clicked:', this.href);
+        });
+    });
+});
+
+// Performance Optimization: Lazy Loading for Heavy Elements
+function lazyLoadElements() {
+    const lazyElements = document.querySelectorAll('.lazy-load');
+    const lazyObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('loaded');
+                lazyObserver.unobserve(entry.target);
+            }
+        });
+    });
+    
+    lazyElements.forEach(element => {
+        lazyObserver.observe(element);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', lazyLoadElements); 

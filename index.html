@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bondfyr - Revolutionize Your Nightlife Experience</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bondfyr - Connect. Party. Bond. | Social Event Discovery Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/bondfyr-logo-transparent.png">
-    <meta name="description" content="Bondfyr - The ultimate nightlife platform that connects users with events, venues, and each other. Discover and enjoy the best nightlife experiences.">
+    <meta name="description" content="Bondfyr - Discover exclusive social events, create memorable parties, and connect with like-minded people through our secure social platform. Professional business verification platform.">
+    <meta name="keywords" content="social events, party hosting, event discovery, nightlife, social networking, business verification">
 </head>
 <body>
     <!-- Header Section -->
@@ -19,10 +20,12 @@
                 <h1>Bondfyr</h1>
             </div>
             <nav class="nav-links">
-                <a href="#about">About</a>
                 <a href="#features">Features</a>
-                <a href="#vendors">For Vendors</a>
-                <a href="#join" class="cta-button">Join Us</a>
+                <a href="#payment-security">Payment Security</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#business-info">Business Info</a>
+                <a href="#contact">Contact</a>
+                <a href="#download" class="cta-button">Download App</a>
             </nav>
             <div class="mobile-menu-icon">
                 <i class="fas fa-bars"></i>
@@ -32,529 +35,571 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-animation">
-            <svg width="100%" height="100%" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background gradient -->
-                <defs>
-                    <radialGradient id="crowd-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
-                        <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
-                        <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
-                    </radialGradient>
-                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="10" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                </defs>
-                
-                <!-- Dark gradient background -->
-                <rect x="0" y="0" width="1200" height="800" fill="url(#crowd-gradient)" />
-                
-                <!-- Stage lights -->
-                <g class="stage-lights">
-                    <circle cx="300" cy="100" r="30" fill="#FF1A47" opacity="0.7" class="light" />
-                    <circle cx="600" cy="70" r="40" fill="#FFA500" opacity="0.7" class="light" />
-                    <circle cx="900" cy="120" r="25" fill="#9C27B0" opacity="0.7" class="light" />
-                    <circle cx="450" cy="90" r="20" fill="#2196F3" opacity="0.7" class="light" />
-                    <circle cx="750" cy="80" r="35" fill="#E91E63" opacity="0.7" class="light" />
-                </g>
-                
-                <!-- Light beams -->
-                <g class="light-beams">
-                    <path d="M300,100 L200,800" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="beam" />
-                    <path d="M300,100 L400,800" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="beam" />
-                    
-                    <path d="M600,70 L400,800" stroke="#FFA500" stroke-width="2" opacity="0.3" class="beam" />
-                    <path d="M600,70 L800,800" stroke="#FFA500" stroke-width="2" opacity="0.3" class="beam" />
-                    
-                    <path d="M900,120 L700,800" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="beam" />
-                    <path d="M900,120 L1000,800" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="beam" />
-                </g>
-                
-                <!-- Crowd silhouettes -->
-                <g class="crowd">
-                    <!-- Row 1 -->
-                    <g transform="translate(0, 650)">
-                        <circle cx="100" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="160" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="220" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="280" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="340" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="400" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="460" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="520" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="580" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="640" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="700" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="760" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="820" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="880" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="940" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="1000" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="1060" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="1120" cy="0" r="30" fill="#000" class="person" />
-                    </g>
-                    
-                    <!-- Row 2 -->
-                    <g transform="translate(30, 700)">
-                        <circle cx="100" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="160" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="220" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="280" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="340" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="400" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="460" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="520" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="580" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="640" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="700" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="760" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="820" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="880" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="940" cy="0" r="30" fill="#000" class="person" />
-                        <circle cx="1000" cy="0" r="30" fill="#000" class="person" />
-                    </g>
-                    
-                    <!-- Row 3 (raised hands) -->
-                    <g transform="translate(60, 600)">
-                        <g class="dancing-person">
-                            <circle cx="130" cy="0" r="25" fill="#000" />
-                            <path d="M110,-15 L90,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M150,-15 L170,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="250" cy="0" r="25" fill="#000" />
-                            <path d="M230,-15 L210,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M270,-15 L290,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="370" cy="0" r="25" fill="#000" />
-                            <path d="M350,-15 L330,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M390,-15 L410,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="490" cy="0" r="25" fill="#000" />
-                            <path d="M470,-15 L450,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M510,-15 L530,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="610" cy="0" r="25" fill="#000" />
-                            <path d="M590,-15 L570,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M630,-15 L650,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="730" cy="0" r="25" fill="#000" />
-                            <path d="M710,-15 L690,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M750,-15 L770,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="850" cy="0" r="25" fill="#000" />
-                            <path d="M830,-15 L810,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M870,-15 L890,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                        <g class="dancing-person">
-                            <circle cx="970" cy="0" r="25" fill="#000" />
-                            <path d="M950,-15 L930,-45" stroke="#000" stroke-width="8" class="arm" />
-                            <path d="M990,-15 L1010,-45" stroke="#000" stroke-width="8" class="arm" />
-                        </g>
-                    </g>
-                </g>
-                
-                <!-- People Queue -->
-                <g class="people-queue">
-                    <!-- Queue of people leading to right side -->
-                    <g transform="translate(50, 550)">
-                        <circle cx="0" cy="0" r="15" fill="#000" class="queue-person" />
-                        <circle cx="40" cy="0" r="15" fill="#000" class="queue-person" />
-                        <circle cx="80" cy="-5" r="15" fill="#000" class="queue-person" />
-                        <circle cx="120" cy="-5" r="15" fill="#000" class="queue-person" />
-                        <circle cx="160" cy="-8" r="15" fill="#000" class="queue-person" />
-                        <circle cx="200" cy="-10" r="15" fill="#000" class="queue-person" />
-                        <circle cx="240" cy="-15" r="15" fill="#000" class="queue-person" />
-                        <circle cx="280" cy="-18" r="15" fill="#000" class="queue-person" />
-                        <circle cx="320" cy="-20" r="15" fill="#000" class="queue-person" />
-                        <circle cx="360" cy="-25" r="15" fill="#000" class="queue-person" />
-                        
-                        <!-- Velvet rope -->
-                        <line x1="-20" y1="25" x2="390" y2="-35" stroke="#E91E63" stroke-width="3" />
-                        <circle cx="-20" cy="25" r="5" fill="#E91E63" />
-                        <circle cx="390" cy="-35" r="5" fill="#E91E63" />
-                        
-                        <!-- Rope posts -->
-                        <rect x="-25" y="25" width="10" height="30" fill="#333" />
-                        <rect x="385" y="-35" width="10" height="30" fill="#333" />
-                        
-                        <!-- Bouncer -->
-                        <g transform="translate(420, -35)">
-                            <circle cx="0" cy="0" r="20" fill="#333" />
-                            <rect x="-12" y="20" width="24" height="35" rx="5" fill="#333" />
-                            <line x1="-12" y1="30" x2="-30" y2="35" stroke="#333" stroke-width="6" />
-                            <line x1="12" y1="30" x2="30" y2="35" stroke="#333" stroke-width="6" />
-                        </g>
-                    </g>
-                </g>
-                
-                <!-- Music notes -->
-                <g class="music-notes">
-                    <path d="M400,380 Q420,350 430,380" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
-                    <circle cx="430" cy="380" r="8" fill="#fff" class="note" />
-                    
-                    <path d="M500,320 Q520,290 530,320" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
-                    <circle cx="530" cy="320" r="8" fill="#fff" class="note" />
-                    
-                    <path d="M680,350 Q700,320 710,350" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
-                    <circle cx="710" cy="350" r="8" fill="#fff" class="note" />
-                    
-                    <path d="M780,400 Q800,370 810,400" stroke="#fff" fill="transparent" stroke-width="3" class="note" />
-                    <circle cx="810" cy="400" r="8" fill="#fff" class="note" />
-                </g>
-            </svg>
-        </div>
-        <div class="container hero-content">
-            <h1 class="animated">Revolutionize Your Nightlife Experience with Bondfyr</h1>
-            <p class="animated" style="animation-delay: 0.2s;">Connect, Discover, and Enjoy the Best Nightlife has to Offer</p>
-            <div class="hero-buttons">
-                <a href="#join" class="cta-button animated" style="animation-delay: 0.4s;">Join the Party</a>
-                <a href="#features" class="cta-button animated" style="background-color: transparent; border: 2px solid var(--primary-color); animation-delay: 0.6s;">Explore Features</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Bondfyr</h2>
-            <p class="section-subtitle">The ultimate nightlife platform that connects users with events, venues, and each other.</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Bondfyr is a revolutionary nightlife event management app designed to streamline ticket booking, ensure seamless entry, and offer an engaging party experience. We eliminate the need for manual registrations and payments at the door, making the entire process smoother for both users and nightclubs.</p>
-                    <p style="margin-top: 20px;">Our mission is to enhance your nightlife experience by providing seamless access to events, exclusive chats, and real-time updates. Whether you're looking for the hottest parties in town or want to connect with like-minded party-goers, Bondfyr has got you covered.</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-headline">Connect. Party. Bond.</h1>
+                <h2 class="hero-subheadline">Discover Exclusive Social Events in Your City</h2>
+                <p class="hero-description">Join curated parties, meet like-minded people, and create unforgettable memories through our secure social platform</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn-primary">Download App</a>
+                    <a href="#how-it-works" class="btn-secondary">Learn More</a>
                 </div>
-                <div class="about-image">
-                    <div class="animated-illustration">
-                        <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background gradient -->
-                            <defs>
-                                <radialGradient id="about-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
-                                    <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
-                                    <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
-                                </radialGradient>
-                                <filter id="about-glow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="10" result="blur" />
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                </filter>
-                                <linearGradient id="speaker-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" stop-color="#333" />
-                                    <stop offset="100%" stop-color="#111" />
-                                </linearGradient>
-                            </defs>
-                            
-                            <!-- Dark gradient background -->
-                            <rect x="0" y="0" width="600" height="400" fill="url(#about-gradient)" />
-                            
-                            <!-- Massive left speaker -->
-                            <g class="left-speaker" transform="translate(80, 200)">
-                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
-                                <!-- Speaker cones -->
-                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                                <!-- Speaker dust cap -->
-                                <circle cx="0" cy="-60" r="10" fill="#111" />
-                                <circle cx="0" cy="20" r="15" fill="#111" />
-                                <!-- Speaker bass port -->
-                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
-                            </g>
-                            
-                            <!-- Massive right speaker -->
-                            <g class="right-speaker" transform="translate(520, 200)">
-                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
-                                <!-- Speaker cones -->
-                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                                <!-- Speaker dust cap -->
-                                <circle cx="0" cy="-60" r="10" fill="#111" />
-                                <circle cx="0" cy="20" r="15" fill="#111" />
-                                <!-- Speaker bass port -->
-                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
-                            </g>
-                            
-                            <!-- DJ Booth -->
-                            <g class="dj-booth" transform="translate(300, 240)">
-                                <!-- Main console -->
-                                <rect x="-120" y="-40" width="240" height="70" rx="5" fill="#222" stroke="#444" stroke-width="2" />
-                                
-                                <!-- CDJ decks -->
-                                <rect x="-90" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
-                                <rect x="20" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
-                                
-                                <!-- Mixer in the middle -->
-                                <rect x="-25" y="-30" width="50" height="60" rx="3" fill="#181818" stroke="#333" stroke-width="1" />
-                                
-                                <!-- Turntable platters -->
-                                <circle cx="-55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
-                                <circle cx="55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
-                                
-                                <!-- Control knobs and buttons -->
-                                <circle cx="-55" cy="-15" r="10" fill="#111" />
-                                <circle cx="55" cy="-15" r="10" fill="#111" />
-                                
-                                <!-- Mixer controls -->
-                                <rect x="-15" y="-20" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                                <rect x="-5" y="-25" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                                <rect x="5" y="-18" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                                <rect x="15" y="-22" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                                
-                                <!-- Control lights -->
-                                <circle cx="-80" cy="-25" r="4" fill="#FF1A47" class="dj-light" />
-                                <circle cx="-70" cy="-25" r="4" fill="#3F51B5" class="dj-light" />
-                                <circle cx="-60" cy="-25" r="4" fill="#4CAF50" class="dj-light" />
-                                <circle cx="60" cy="-25" r="4" fill="#FF9800" class="dj-light" />
-                                <circle cx="70" cy="-25" r="4" fill="#9C27B0" class="dj-light" />
-                                <circle cx="80" cy="-25" r="4" fill="#F44336" class="dj-light" />
-                            </g>
-                            
-                            <!-- DJ Figure -->
-                            <g class="dj-figure" transform="translate(300, 150)">
-                                <!-- Head with headphones -->
-                                <circle cx="0" cy="0" r="20" fill="#444" />
-                                <path d="M-25 -5 Q-30 -20, -20 -20 L-5 -20 Q0 -25, 5 -20 L20 -20 Q30 -20, 25 -5" fill="#FF1A47" class="headphones" />
-                                
-                                <!-- Upper body -->
-                                <rect x="-15" y="20" width="30" height="40" rx="5" fill="#333" />
-                                
-                                <!-- Arms -->
-                                <g class="dj-arms">
-                                    <path d="M-15,30 C-40,20 -50,40 -45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
-                                    <path d="M15,30 C40,20 50,40 45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
-                                </g>
-                                
-                                <!-- Hands on equipment -->
-                                <circle cx="-45" cy="60" r="6" fill="#444" class="dj-hand" />
-                                <circle cx="45" cy="60" r="6" fill="#444" class="dj-hand" />
-                            </g>
-                            
-                            <!-- Signboard with Bondfyr logo behind DJ -->
-                            <g class="signboard" transform="translate(300, 50)">
-                                <rect x="-70" y="-30" width="140" height="60" rx="5" fill="#111" stroke="#333" stroke-width="2" />
-                                <g transform="scale(0.25)" class="sign-logo">
-                                    <image href="images/bondfyr_logo_zoomed_transparent_3x.png" width="200" height="200" x="-100" y="-100" />
-                                </g>
-                            </g>
-                            
-                            <!-- Sound waves emanating from speakers -->
-                            <g class="sound-waves">
-                                <path d="M80,140 Q100,160 80,180 Q60,200 80,220 Q100,240 80,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="left-wave" />
-                                <path d="M80,150 Q110,180 80,210 Q50,240 80,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="left-wave" />
-                                
-                                <path d="M520,140 Q500,160 520,180 Q540,200 520,220 Q500,240 520,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="right-wave" />
-                                <path d="M520,150 Q490,180 520,210 Q550,240 520,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="right-wave" />
-                            </g>
-                            
-                            <!-- Bass waves from speakers -->
-                            <g class="bass-waves">
-                                <circle cx="80" cy="200" r="60" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
-                                <circle cx="80" cy="200" r="80" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
-                                
-                                <circle cx="520" cy="200" r="60" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
-                                <circle cx="520" cy="200" r="80" stroke="#FF1A47" stroke-width="1" fill="none" opacity="0.2" class="bass-wave" />
-                            </g>
-                            
-                            <!-- Confetti particles -->
-                            <g class="confetti">
-                                <rect x="150" y="50" width="5" height="5" fill="#FF1A47" class="confetti-particle" />
-                                <rect x="200" y="80" width="5" height="5" fill="#4CAF50" class="confetti-particle" />
-                                <rect x="250" y="60" width="5" height="5" fill="#3F51B5" class="confetti-particle" />
-                                <rect x="300" y="70" width="5" height="5" fill="#FF9800" class="confetti-particle" />
-                                <rect x="350" y="50" width="5" height="5" fill="#9C27B0" class="confetti-particle" />
-                                <rect x="400" y="80" width="5" height="5" fill="#F44336" class="confetti-particle" />
-                                <rect x="450" y="60" width="5" height="5" fill="#FFEB3B" class="confetti-particle" />
-                                <circle cx="180" cy="70" r="3" fill="#FF1A47" class="confetti-particle" />
-                                <circle cx="230" cy="50" r="3" fill="#4CAF50" class="confetti-particle" />
-                                <circle cx="280" cy="80" r="3" fill="#3F51B5" class="confetti-particle" />
-                                <circle cx="330" cy="60" r="3" fill="#FF9800" class="confetti-particle" />
-                                <circle cx="380" cy="70" r="3" fill="#9C27B0" class="confetti-particle" />
-                                <circle cx="430" cy="50" r="3" fill="#F44336" class="confetti-particle" />
-                            </g>
-                            
-                            <!-- Spark effect from DJ console -->
-                            <g class="dj-sparks">
-                                <line x1="280" y1="210" x2="270" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
-                                <line x1="290" y1="215" x2="285" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
-                                <line x1="300" y1="212" x2="300" y2="185" stroke="#FFEB3B" stroke-width="1" class="spark" />
-                                <line x1="310" y1="215" x2="315" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
-                                <line x1="320" y1="210" x2="330" y2="190" stroke="#FFEB3B" stroke-width="1" class="spark" />
-                            </g>
-                            
-                            <!-- Spotlights from ceiling -->
-                            <g class="spotlights">
-                                <path d="M150,0 L200,180" stroke="#FF1A47" stroke-width="2" opacity="0.3" class="spotlight-beam" />
-                                <path d="M300,0 L300,150" stroke="#9C27B0" stroke-width="2" opacity="0.3" class="spotlight-beam" />
-                                <path d="M450,0 L400,180" stroke="#3F51B5" stroke-width="2" opacity="0.3" class="spotlight-beam" />
-                                
-                                <circle cx="150" cy="10" r="10" fill="#FF1A47" opacity="0.7" class="spotlight" />
-                                <circle cx="300" cy="10" r="10" fill="#9C27B0" opacity="0.7" class="spotlight" />
-                                <circle cx="450" cy="10" r="10" fill="#3F51B5" opacity="0.7" class="spotlight" />
-                            </g>
-                            
-                            <!-- Music notes -->
-                            <g class="music-notes">
-                                <path d="M150,100 Q170,80 180,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                                <circle cx="180" cy="100" r="5" fill="#fff" class="note" />
-                                
-                                <path d="M450,100 Q430,80 420,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                                <circle cx="420" cy="100" r="5" fill="#fff" class="note" />
-                            </g>
-                        </svg>
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>PCI-DSS Compliant</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="section features" id="features">
-        <div class="container">
-            <h2 class="section-title">Key Features</h2>
-            <p class="section-subtitle">Discover how Bondfyr transforms your nightlife experience with these incredible features.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comments"></i>
+                    <div class="trust-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure Payments</span>
                     </div>
-                    <h3 class="feature-title">City Chats</h3>
-                    <p>Connect with locals in your city and discuss upcoming events. Engage in real-time conversations, plan meetups, and stay informed about the best parties happening around you.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <h3 class="feature-title">Event Discovery</h3>
-                    <p>Find and explore curated events happening around you. Access detailed event information including venue, time, and ticket tiers. Receive notifications about events that match your interests.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                    <div class="trust-item">
                         <i class="fas fa-users"></i>
+                        <span>Trusted Community</span>
                     </div>
-                    <h3 class="feature-title">Event Chats</h3>
-                    <p>Join exclusive chats for event attendees to plan after-parties and share experiences. These chats are only accessible to those physically at the venue, ensuring private and relevant discussions.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h3 class="feature-title">Photo Contests</h3>
-                    <p>Capture and share your best moments with a one-time photo upload feature. Engage with the community by viewing and liking photos, fostering a sense of connection among attendees.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-ticket-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Smart Ticketing</h3>
-                    <p>Purchase tiered tickets with dynamic pricing directly through the app. Access your tickets offline and use QR codes for quick and seamless entry to events.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="feature-title">Live Attendance</h3>
-                    <p>View real-time attendance at nightclubs and make informed decisions. Get updates on venue capacity and crowd demographics to enhance your night out experience.</p>
+            </div>
+            <div class="hero-image">
+                <div class="party-visual">
+                    <svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="party-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.3" />
+                            </radialGradient>
+                        </defs>
+                        <circle cx="250" cy="200" r="150" fill="url(#party-glow)" />
+                        <text x="250" y="210" text-anchor="middle" fill="white" font-size="24" font-weight="bold">🎉 Party Hub 🎉</text>
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vendor Services Section -->
-    <section class="section vendor-services" id="vendors">
+    <!-- Core Features Section -->
+    <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">For Venue Owners</h2>
-            <p class="section-subtitle">Bondfyr offers powerful tools to enhance your venue operations and customer experience.</p>
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-bar"></i>
+            <h2 class="section-title">Core Features</h2>
+            
+            <!-- For Party Hosts -->
+            <div class="feature-category">
+                <h3 class="feature-category-title">🎯 For Party Hosts</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-plus"></i>
+                        </div>
+                        <h4>Create & Monetize Events</h4>
+                        <p>Set pricing, guest limits, and earn 80% revenue from your parties</p>
                     </div>
-                    <h3 class="feature-title">Analytics & Insights</h3>
-                    <p>Gain valuable insights into attendance patterns, customer preferences, and demographic data. Make data-driven decisions to optimize your operations and marketing strategies.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h4>Smart Guest Management</h4>
+                        <p>Approve/deny requests with intro messages and maintain control</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Real-time Chat</h4>
+                        <p>Engage with guests before and during events</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Earnings Dashboard</h4>
+                        <p>Track income and party analytics in real-time</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location Control</h4>
+                        <p>Set radius-based discovery zones for your events</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bell"></i>
+            </div>
+
+            <!-- For Party Guests -->
+            <div class="feature-category">
+                <h3 class="feature-category-title">🎉 For Party Guests</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search-location"></i>
+                        </div>
+                        <h4>Discover Local Events</h4>
+                        <p>Find parties by vibe, price, and proximity to your location</p>
                     </div>
-                    <h3 class="feature-title">Real-time Updates</h3>
-                    <p>Send instant notifications to event attendees about changes in schedule, special offers, or important announcements. Keep your audience informed and engaged throughout the event.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-ticket-alt"></i>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Secure Payment Processing</h4>
+                        <p>Pay only after host approval with encrypted transactions</p>
                     </div>
-                    <h3 class="feature-title">Ticket Management</h3>
-                    <p>Manage ticket tiers, pricing, and availability in real-time. Track sales, monitor entry rates, and handle gender ratio requirements seamlessly through our intuitive dashboard.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h4>Anonymous Networking</h4>
+                        <p>Connect through numbered guest system for privacy</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h4>Request-to-Join System</h4>
+                        <p>Send personalized intro messages to hosts</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-broadcast-tower"></i>
+                        </div>
+                        <h4>Live Party Updates</h4>
+                        <p>Real-time guest count and chat access</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Join Us Section -->
-    <section class="section" id="join">
+    <!-- Payment Processing Section -->
+    <section class="payment-security" id="payment-security">
         <div class="container">
-            <h2 class="section-title">Join the Party!</h2>
-            <p class="section-subtitle">Help us build the ultimate nightlife app by sharing your suggestions and joining our email list.</p>
-            <div class="contact-form">
-                <form id="suggestionForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
+            <h2 class="section-title">💳 Secure & Transparent Payment System</h2>
+            <p class="section-subtitle">Critical for Business Verification</p>
+            
+            <div class="payment-flow">
+                <h3>Our Payment Flow:</h3>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <h4>Browse & Request</h4>
+                        <p>Discover parties and submit join requests (FREE)</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your Email" required>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <h4>Host Approval</h4>
+                        <p>Hosts review requests and approve guests</p>
                     </div>
-                    <div class="form-group">
-                        <label for="suggestion">Your Suggestions</label>
-                        <textarea id="suggestion" placeholder="Share your ideas to make Bondfyr even better..."></textarea>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <h4>Secure Payment</h4>
+                        <p>Only pay after approval via encrypted payment gateway</p>
                     </div>
-                    <button type="submit" class="submit-button">Submit Suggestion</button>
-                </form>
-                <div id="success-message" style="display: none; text-align: center; margin-top: 20px; padding: 20px; background-color: rgba(0, 200, 83, 0.1); border-radius: 8px; border: 1px solid #00C853; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                    <i class="fas fa-check-circle" style="color: #00C853; font-size: 36px; margin-bottom: 15px; display: block;"></i>
-                    <h3 style="color: #00C853; margin-bottom: 10px;">Thank You!</h3>
-                    <p style="font-size: 16px; line-height: 1.5;">Your suggestion has been submitted successfully and stored in our database.</p>
-                    <p style="font-size: 14px; margin-top: 10px;">We'll keep you updated on Bondfyr's progress via email.</p>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <h4>Instant Access</h4>
+                        <p>Join party chat and get location details immediately</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-features">
+                <div class="payment-column">
+                    <h3>Payment Security:</h3>
+                    <ul class="security-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>PCI-DSS Compliant</strong> payment processing via Dodo Payments</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Encrypted transactions</strong> with industry-standard security</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>No upfront payments</strong> - pay only after host approval</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Automatic refunds</strong> for cancelled events</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Fraud protection</strong> and dispute resolution</li>
+                    </ul>
+                </div>
+                
+                <div class="payment-column">
+                    <h3>Revenue Model:</h3>
+                    <ul class="revenue-list">
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Host Earnings:</strong> 80% of ticket price goes directly to hosts</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Platform Fee:</strong> 20% covers payment processing, security, and platform maintenance</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>No Hidden Fees:</strong> Transparent pricing displayed upfront</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Instant Payouts:</strong> Hosts receive earnings within 24-48 hours</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Trust & Safety Section -->
+    <section class="trust-safety">
+        <div class="container">
+            <h2 class="section-title">🛡️ Built for Safe Social Connections</h2>
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>Host Screening</h4>
+                    <p>Party creators must provide valid location details</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h4>Guest Approval System</h4>
+                    <p>Hosts control who attends their events</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>Community Guidelines</h4>
+                    <p>Zero tolerance for harassment or unsafe behavior</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Report issues anytime via in-app support system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">🏙️ How It Works</h2>
+            
+            <div class="how-it-works-tabs">
+                <button class="tab-button active" data-tab="hosts">For Hosts</button>
+                <button class="tab-button" data-tab="guests">For Guests</button>
+            </div>
+
+            <div class="tab-content active" id="hosts">
+                <h3>For Hosts:</h3>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">1</div>
+                        <h4>Create Your Party</h4>
+                        <p>Add title, description, pricing, guest limit, and vibe tags</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">2</div>
+                        <h4>Set Your Space</h4>
+                        <p>Define location and discovery radius</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">3</div>
+                        <h4>Review Requests</h4>
+                        <p>See guest intro messages and approve attendees</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">4</div>
+                        <h4>Host & Earn</h4>
+                        <p>Run your party and earn 80% of ticket sales</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">5</div>
+                        <h4>Get Paid</h4>
+                        <p>Receive earnings automatically after event completion</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="guests">
+                <h3>For Guests:</h3>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-icon">1</div>
+                        <h4>Discover Events</h4>
+                        <p>Browse parties by location, price, and vibe</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">2</div>
+                        <h4>Request Access</h4>
+                        <p>Send intro message explaining why you'd be a great guest</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">3</div>
+                        <h4>Get Approved</h4>
+                        <p>Wait for host approval (usually within hours)</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">4</div>
+                        <h4>Pay Securely</h4>
+                        <p>Complete payment only after approval</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">5</div>
+                        <h4>Join & Connect</h4>
+                        <p>Access party chat and get location details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Information Section -->
+    <section class="business-info" id="business-info">
+        <div class="container">
+            <h2 class="section-title">📊 About Bondfyr Inc.</h2>
+            <p class="section-subtitle">For Verification</p>
+            
+            <div class="business-details">
+                <div class="business-card">
+                    <h3>Business Model</h3>
+                    <p>Two-sided marketplace for social event discovery and hosting</p>
+                </div>
+                <div class="business-card">
+                    <h3>Revenue Streams</h3>
+                    <p>20% transaction fee on successful party bookings</p>
+                </div>
+                <div class="business-card">
+                    <h3>Target Market</h3>
+                    <p>Young adults seeking authentic social connections and experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features Section -->
+    <section class="app-features">
+        <div class="container">
+            <h2 class="section-title">📱 Comprehensive Social Platform</h2>
+            <div class="app-features-grid">
+                <div class="app-feature">
+                    <i class="fas fa-comments"></i>
+                    <h4>Real-time Messaging</h4>
+                    <p>Party-specific chat rooms with anonymous guest numbering</p>
+                </div>
+                <div class="app-feature">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Location Services</h4>
+                    <p>GPS-based party discovery with privacy controls</p>
+                </div>
+                <div class="app-feature">
+                    <i class="fas fa-user-cog"></i>
+                    <h4>Profile Management</h4>
+                    <p>Customizable profiles with social media integration</p>
+                </div>
+                <div class="app-feature">
+                    <i class="fas fa-bell"></i>
+                    <h4>Push Notifications</h4>
+                    <p>Instant updates on approvals, payments, and party news</p>
+                </div>
+                <div class="app-feature">
+                    <i class="fas fa-share-alt"></i>
+                    <h4>Social Sharing</h4>
+                    <p>Share favorite parties with friends seamlessly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Party Categories Section -->
+    <section class="party-categories">
+        <div class="container">
+            <h2 class="section-title">🎪 Every Vibe, Every Occasion</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h4>House Parties</h4>
+                    <p>Intimate gatherings in cozy home settings</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎭</div>
+                    <h4>Themed Events</h4>
+                    <p>Creative parties with unique themes and costumes</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🌃</div>
+                    <h4>Nightlife</h4>
+                    <p>Club nights and bar gatherings</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎵</div>
+                    <h4>Music Events</h4>
+                    <p>Live performances and DJ sets</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🌅</div>
+                    <h4>Day Parties</h4>
+                    <p>Daytime celebrations and brunches</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎂</div>
+                    <h4>Celebrations</h4>
+                    <p>Birthdays, milestones, and special occasions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Pages Section -->
+    <section class="legal-pages" id="legal">
+        <div class="container">
+            <h2 class="section-title">📜 Legal Information</h2>
+            
+            <div class="legal-tabs">
+                <button class="legal-tab-button active" data-tab="privacy">Privacy Policy</button>
+                <button class="legal-tab-button" data-tab="terms">Terms of Service</button>
+            </div>
+
+            <div class="legal-tab-content active" id="privacy">
+                <h3>BONDFYR PRIVACY POLICY</h3>
+                <p><strong>Last Updated: April 6, 2025</strong></p>
+                
+                <div class="legal-section">
+                    <h4>Information We Collect</h4>
+                    <p>We collect information that you provide directly to us when you create an account or use our features. This includes your name, email address, location data, and profile information. We also collect usage data to improve our services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>How We Use Your Information</h4>
+                    <p>We use your information solely to provide and improve our services, connect you with local events, ensure user safety, and communicate important updates. We do not sell, rent, or trade your personal information.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Information Sharing</h4>
+                    <p>We only share your information when necessary to provide our services (such as showing your profile to event hosts) or as required by law. We never sell your data to third parties for marketing purposes.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Data Security</h4>
+                    <p>We implement industry-standard security measures to protect your personal information. Your data is stored securely and access is limited to authorized personnel only.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Payment Information</h4>
+                    <p>Payment processing is handled by our secure third-party payment processor (Dodo Payments). We do not store your credit card information on our servers. All payment data is encrypted and processed according to PCI-DSS standards.</p>
+                </div>
+            </div>
+
+            <div class="legal-tab-content" id="terms">
+                <h3>BONDFYR TERMS OF SERVICE</h3>
+                <p><strong>Last Updated: April 6, 2025</strong></p>
+                
+                <div class="legal-section">
+                    <h4>Payment Terms</h4>
+                    <ul>
+                        <li><strong>Host Earnings:</strong> Hosts receive 80% of ticket sales for their events</li>
+                        <li><strong>Platform Fee:</strong> Bondfyr retains 20% to cover payment processing, security, and platform maintenance</li>
+                        <li><strong>Payment Processing:</strong> All payments are processed securely through our third-party payment processor</li>
+                        <li><strong>Refunds:</strong> Refunds are issued for cancelled events according to our refund policy</li>
+                        <li><strong>Payout Schedule:</strong> Host earnings are processed within 24-48 hours after event completion</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Legal Responsibility</h4>
+                    <p>Event hosts are legally responsible for their parties, including guest safety, property damage, noise complaints, and compliance with local laws and regulations.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Code of Conduct</h4>
+                    <p>Users must behave respectfully when using our platform and attending events. Harassment, discrimination, or illegal activities are strictly prohibited.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h4>Limitation of Liability</h4>
+                    <p>Bondfyr's liability is limited to the maximum extent permitted by law. We are not responsible for incidents that occur at events hosted through our platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">📞 Get in Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Business Inquiries</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>Support</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h4>Press</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Partnerships</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Privacy</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-gavel"></i>
+                    <h4>Legal</h4>
+                    <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2 class="section-title">Download Bondfyr</h2>
+            <p class="download-description">Join thousands of users already connecting through Bondfyr</p>
+            <div class="download-buttons">
+                <a href="#" class="download-btn">
+                    <i class="fab fa-apple"></i>
+                    <div>
+                        <span>Download on the</span>
+                        <strong>App Store</strong>
+                    </div>
+                </a>
+                <a href="#" class="download-btn">
+                    <i class="fab fa-google-play"></i>
+                    <div>
+                        <span>Get it on</span>
+                        <strong>Google Play</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Bondfyr</h3>
-                    <p>Revolutionizing nightlife experiences by connecting people, events, and venues in one seamless platform.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <div class="footer-links">
-                        <a href="#about">About Us</a>
-                        <a href="#features">Features</a>
-                        <a href="#vendors">For Venues</a>
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/bondfyr-logo-transparent.png" alt="Bondfyr Logo">
+                        <h3>Bondfyr</h3>
                     </div>
+                    <p>Connect. Party. Bond. The ultimate social event discovery platform.</p>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <div class="footer-links">
-                        <a href="mailto:karjunvarma2001@gmail.com"><i class="fas fa-envelope"></i> karjunvarma2001@gmail.com</a>
-                        <a href="tel:+919403783265"><i class="fas fa-phone"></i> +91 9403783265</a>
-                    </div>
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#payment-security">Payment Security</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#business-info">Business Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#legal">Privacy Policy</a></li>
+                        <li><a href="#legal">Terms of Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: karjunvarma2001@gmail.com</p>
+                    <p>Business verification platform</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 Bondfyr</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bondfyr Inc. All rights reserved. Professional business verification platform.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Add script at the end of the body -->
     <script src="script.js"></script>
 </body>
 </html> 
