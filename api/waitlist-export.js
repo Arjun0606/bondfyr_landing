@@ -1,6 +1,6 @@
 'use strict';
 
-import { kv } from '@vercel/kv';
+import { list } from '@vercel/blob';
 
 export default async function handler(req, res) {
 	if (req.method !== 'GET') return res.status(405).end();
@@ -10,11 +10,13 @@ export default async function handler(req, res) {
 		return res.status(401).json({ error: 'Unauthorized' });
 	}
 	try {
-		const ids = await kv.lrange('waitlist:index', 0, -1);
+		const all = await list({ prefix: 'waitlist/' });
 		const rows = [];
-		for (const id of ids) {
-			const data = await kv.hgetall(`waitlist:${id}`);
-			if (data) rows.push(data);
+		for (const item of all.blobs || []) {
+			const resp = await fetch(item.url);
+			if (!resp.ok) continue;
+			const json = await resp.json();
+			rows.push(json);
 		}
 		if (format === 'csv') {
 			const header = 'id,email,name,source,createdTime';

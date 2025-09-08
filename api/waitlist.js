@@ -1,6 +1,6 @@
 'use strict';
 
-import { kv } from '@vercel/kv';
+import { put } from '@vercel/blob';
 
 export default async function handler(req, res) {
 	if (req.method !== 'POST') return res.status(405).end();
@@ -12,9 +12,7 @@ export default async function handler(req, res) {
 	try {
 		const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 		const entry = { id, email, name: name || '', source: 'website', createdTime: new Date().toISOString() };
-		// Store by ID and also push to a list for quick export
-		await kv.hset(`waitlist:${id}`, entry);
-		await kv.lpush('waitlist:index', id);
+		const { url } = await put(`waitlist/${id}.json`, JSON.stringify(entry), { access: 'private', contentType: 'application/json' });
 		return res.status(200).json({ ok: true });
 	} catch (e) {
 		return res.status(500).json({ error: 'Server error' });
