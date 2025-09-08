@@ -1,14 +1,16 @@
 [build]
-  functions = "netlify/functions"
+  # No local Netlify Functions used anymore
+  # functions = "netlify/functions"
 
+# Proxy API routes to Vercel so the static site on Netlify can use Vercel serverless
 [[redirects]]
   from = "/api/waitlist"
-  to = "/.netlify/functions/waitlist"
+  to = "https://bondfyr-landing.vercel.app/api/waitlist"
   status = 200
   force = true
 
 [[redirects]]
   from = "/api/waitlist-export"
-  to = "/.netlify/functions/waitlist_export"
+  to = "https://bondfyr-landing.vercel.app/api/waitlist-export"
   status = 200
   force = true
