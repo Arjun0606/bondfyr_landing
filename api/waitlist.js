@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 
 		const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 		const entry = { id, email, name: name || '', source: 'website', createdTime: new Date().toISOString() };
-		await put(`waitlist/${id}.json`, JSON.stringify(entry), { access: 'private', contentType: 'application/json' });
+		await put(`waitlist/${id}.json`, JSON.stringify(entry), { access: 'public', contentType: 'application/json' });
 		return res.status(200).json({ ok: true });
 	} catch (e) {
 		console.error('waitlist API error', e);
