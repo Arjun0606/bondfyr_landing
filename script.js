@@ -44,6 +44,55 @@ document.addEventListener('DOMContentLoaded', function() {
     retryFailedSubmissions();
 });
 
+// Waitlist form submission
+(function initWaitlist() {
+    const form = document.getElementById('waitlist-form');
+    if (!form) return;
+
+    const emailInput = document.getElementById('wl-email');
+    const nameInput = document.getElementById('wl-name');
+    const honeypot = form.querySelector('input[name="company"]');
+    const submitBtn = document.getElementById('wl-submit');
+    const successMsg = document.getElementById('wl-success');
+    const errorMsg = document.getElementById('wl-error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!emailInput || !submitBtn) return;
+        const email = emailInput.value.trim();
+        const name = (nameInput?.value || '').trim();
+        const company = (honeypot?.value || '').trim();
+
+        errorMsg && (errorMsg.style.display = 'none');
+        successMsg && (successMsg.style.display = 'none');
+
+        if (!email || !/^([^@\s]+)@([^@\s]+)\.[^@\s]+$/.test(email)) {
+            errorMsg && (errorMsg.textContent = 'Valid email required');
+            errorMsg && (errorMsg.style.display = 'block');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Joining…';
+        try {
+            const res = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, name, company })
+            });
+            if (!res.ok) throw new Error('Failed');
+            emailInput.value = '';
+            if (nameInput) nameInput.value = '';
+            successMsg && (successMsg.style.display = 'block');
+        } catch (err) {
+            errorMsg && (errorMsg.style.display = 'block');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Join Waitlist';
+        }
+    });
+})();
+
 // Form validation
 function validateForm(name, email) {
     if (!name || !email) {

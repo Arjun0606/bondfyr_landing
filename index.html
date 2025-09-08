@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bondfyr - Connect. Party. Bond. | Social Event Discovery Platform</title>
+    <title>Bondfyr — Discover and Host Real‑World Social Events</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/bondfyr-logo-transparent.png">
-    <meta name="description" content="Bondfyr - Discover exclusive social events, create memorable parties, and connect with like-minded people through our secure social platform. Professional business verification platform.">
-    <meta name="keywords" content="social events, party hosting, event discovery, nightlife, social networking, business verification">
+    <meta name="description" content="Host or find house parties, DnD campaigns, watch parties, DJ sessions, and more. Request‑to‑join, host‑approved access, Dodo‑powered listing fees, and direct guest‑to‑host payments.">
+    <meta name="keywords" content="parties, afterparty, events, DnD, watch party, DJ session, meetups, social, host events, nightlife">
 </head>
 <body>
     <!-- Header Section -->
@@ -21,11 +21,11 @@
             </div>
             <nav class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#payment-security">Payment Security</a>
                 <a href="#how-it-works">How It Works</a>
-                <a href="#business-info">Business Info</a>
+                <a href="#safety">Safety</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
-                <a href="#contact" class="cta-button">Contact Us</a>
+                <a href="#waitlist" class="cta-button">Join Waitlist</a>
             </nav>
             <div class="mobile-menu-icon">
                 <i class="fas fa-bars"></i>
@@ -37,445 +37,272 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-headline">Connect. Party. Bond.</h1>
-                <h2 class="hero-subheadline">Discover Exclusive Social Events in Your City</h2>
-                <p class="hero-description">Join curated parties, meet like-minded people, and create unforgettable memories through our secure social platform</p>
-                <div class="hero-buttons">
-                    <a href="#features" class="btn-primary">Explore Features</a>
-                    <a href="#how-it-works" class="btn-secondary">Learn More</a>
+                <h1 class="hero-headline">Connect. Host. Bond.</h1>
+                <h2 class="hero-subheadline">Discover and host real‑world social events—house parties, DnD campaigns, watch parties, DJ sessions, meetups, and more.</h2>
+                <p class="hero-description">Private, request‑to‑join events. Hosts approve guests. Guests pay hosts directly.</p>
+            <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/idXXXXXXXXX" class="btn-primary" target="_blank" rel="noopener noreferrer">Download on iOS</a>
+                    <a href="#waitlist" class="btn-secondary">Join Waitlist</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-animation">
                     <svg width="100%" height="100%" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background gradient -->
-                        <defs>
-                            <radialGradient id="about-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
-                                <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
-                                <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
-                            </radialGradient>
-                            <filter id="about-glow" x="-20%" y="-20%" width="140%" height="140%">
-                                <feGaussianBlur stdDeviation="10" result="blur" />
-                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                            </filter>
-                            <linearGradient id="speaker-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#333" />
-                                <stop offset="100%" stop-color="#111" />
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Dark gradient background -->
-                        <rect x="0" y="0" width="600" height="400" fill="url(#about-gradient)" />
-                        
-                        <!-- Massive left speaker -->
-                        <g class="left-speaker" transform="translate(80, 200)">
-                            <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
-                            <!-- Speaker cones -->
-                            <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                            <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                            <!-- Speaker dust cap -->
-                            <circle cx="0" cy="-60" r="10" fill="#111" />
-                            <circle cx="0" cy="20" r="15" fill="#111" />
-                            <!-- Speaker bass port -->
-                            <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
-                        </g>
-                        
-                        <!-- Massive right speaker -->
-                        <g class="right-speaker" transform="translate(520, 200)">
-                            <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
-                            <!-- Speaker cones -->
-                            <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                            <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
-                            <!-- Speaker dust cap -->
-                            <circle cx="0" cy="-60" r="10" fill="#111" />
-                            <circle cx="0" cy="20" r="15" fill="#111" />
-                            <!-- Speaker bass port -->
-                            <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
-                        </g>
-                        
-                        <!-- DJ Booth -->
-                        <g class="dj-booth" transform="translate(300, 240)">
-                            <!-- Main console -->
-                            <rect x="-120" y="-40" width="240" height="70" rx="5" fill="#222" stroke="#444" stroke-width="2" />
+                            <!-- Background gradient -->
+                            <defs>
+                                <radialGradient id="about-gradient" cx="50%" cy="100%" r="100%" fx="50%" fy="100%">
+                                    <stop offset="0%" stop-color="#FF1A47" stop-opacity="0.3" />
+                                    <stop offset="70%" stop-color="#121212" stop-opacity="0.8" />
+                                </radialGradient>
+                                <filter id="about-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="10" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <linearGradient id="speaker-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#333" />
+                                    <stop offset="100%" stop-color="#111" />
+                                </linearGradient>
+                            </defs>
                             
-                            <!-- CDJ decks -->
-                            <rect x="-90" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
-                            <rect x="20" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
+                            <!-- Dark gradient background -->
+                            <rect x="0" y="0" width="600" height="400" fill="url(#about-gradient)" />
                             
-                            <!-- Mixer in the middle -->
-                            <rect x="-25" y="-30" width="50" height="60" rx="3" fill="#181818" stroke="#333" stroke-width="1" />
-                            
-                            <!-- Turntable platters -->
-                            <circle cx="-55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
-                            <circle cx="55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
-                            
-                            <!-- Control knobs and buttons -->
-                            <circle cx="-55" cy="-15" r="10" fill="#111" />
-                            <circle cx="55" cy="-15" r="10" fill="#111" />
-                            
-                            <!-- Mixer controls -->
-                            <rect x="-15" y="-20" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                            <rect x="-5" y="-25" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                            <rect x="5" y="-18" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                            <rect x="15" y="-22" width="5" height="20" fill="#ddd" rx="2" class="fader" />
-                            
-                            <!-- Control lights -->
-                            <circle cx="-80" cy="-25" r="4" fill="#FF1A47" class="dj-light" />
-                            <circle cx="-70" cy="-25" r="4" fill="#3F51B5" class="dj-light" />
-                            <circle cx="-60" cy="-25" r="4" fill="#4CAF50" class="dj-light" />
-                            <circle cx="60" cy="-25" r="4" fill="#FF9800" class="dj-light" />
-                            <circle cx="70" cy="-25" r="4" fill="#9C27B0" class="dj-light" />
-                            <circle cx="80" cy="-25" r="4" fill="#F44336" class="dj-light" />
-                        </g>
-                        
-                        <!-- DJ Figure -->
-                        <g class="dj-figure" transform="translate(300, 150)">
-                            <!-- Head with headphones -->
-                            <circle cx="0" cy="0" r="20" fill="#444" />
-                            <path d="M-25 -5 Q-30 -20, -20 -20 L-5 -20 Q0 -25, 5 -20 L20 -20 Q30 -20, 25 -5" fill="#FF1A47" class="headphones" />
-                            
-                            <!-- Upper body -->
-                            <rect x="-15" y="20" width="30" height="40" rx="5" fill="#333" />
-                            
-                            <!-- Arms -->
-                            <g class="dj-arms">
-                                <path d="M-15,30 C-40,20 -50,40 -45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
-                                <path d="M15,30 C40,20 50,40 45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
+                            <!-- Massive left speaker -->
+                            <g class="left-speaker" transform="translate(80, 200)">
+                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
+                                <!-- Speaker cones -->
+                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <!-- Speaker dust cap -->
+                                <circle cx="0" cy="-60" r="10" fill="#111" />
+                                <circle cx="0" cy="20" r="15" fill="#111" />
+                                <!-- Speaker bass port -->
+                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
                             </g>
                             
-                            <!-- Hands on equipment -->
-                            <circle cx="-45" cy="60" r="6" fill="#444" class="dj-hand" />
-                            <circle cx="45" cy="60" r="6" fill="#444" class="dj-hand" />
-                        </g>
-                        
-                        <!-- Sound waves emanating from speakers -->
-                        <g class="sound-waves">
-                            <path d="M80,140 Q100,160 80,180 Q60,200 80,220 Q100,240 80,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="left-wave" />
-                            <path d="M80,150 Q110,180 80,210 Q50,240 80,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="left-wave" />
+                            <!-- Massive right speaker -->
+                            <g class="right-speaker" transform="translate(520, 200)">
+                                <rect x="-50" y="-100" width="100" height="200" rx="5" fill="url(#speaker-gradient)" stroke="#444" stroke-width="2" />
+                                <!-- Speaker cones -->
+                                <circle cx="0" cy="-60" r="30" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <circle cx="0" cy="20" r="40" fill="#222" stroke="#333" stroke-width="2" class="speaker-cone" />
+                                <!-- Speaker dust cap -->
+                                <circle cx="0" cy="-60" r="10" fill="#111" />
+                                <circle cx="0" cy="20" r="15" fill="#111" />
+                                <!-- Speaker bass port -->
+                                <rect x="-20" y="70" width="40" height="15" rx="7" fill="#111" />
+                            </g>
                             
-                            <path d="M520,140 Q500,160 520,180 Q540,200 520,220 Q500,240 520,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="right-wave" />
-                            <path d="M520,150 Q490,180 520,210 Q550,240 520,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="right-wave" />
-                        </g>
-                        
-                        <!-- Music notes -->
-                        <g class="music-notes">
-                            <path d="M150,100 Q170,80 180,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                            <circle cx="180" cy="100" r="5" fill="#fff" class="note" />
+                            <!-- DJ Booth -->
+                            <g class="dj-booth" transform="translate(300, 240)">
+                                <!-- Main console -->
+                                <rect x="-120" y="-40" width="240" height="70" rx="5" fill="#222" stroke="#444" stroke-width="2" />
+                                
+                                <!-- CDJ decks -->
+                                <rect x="-90" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
+                                <rect x="20" y="-35" width="70" height="40" rx="3" fill="#111" stroke="#333" stroke-width="1" />
+                                
+                                <!-- Mixer in the middle -->
+                                <rect x="-25" y="-30" width="50" height="60" rx="3" fill="#181818" stroke="#333" stroke-width="1" />
+                                
+                                <!-- Turntable platters -->
+                                <circle cx="-55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
+                                <circle cx="55" cy="-15" r="25" fill="#333" stroke="#555" stroke-width="1" class="turntable" />
+                                
+                                <!-- Control knobs and buttons -->
+                                <circle cx="-55" cy="-15" r="10" fill="#111" />
+                                <circle cx="55" cy="-15" r="10" fill="#111" />
+                                
+                                <!-- Mixer controls -->
+                                <rect x="-15" y="-20" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="-5" y="-25" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="5" y="-18" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                <rect x="15" y="-22" width="5" height="20" fill="#ddd" rx="2" class="fader" />
+                                
+                                <!-- Control lights -->
+                                <circle cx="-80" cy="-25" r="4" fill="#FF1A47" class="dj-light" />
+                                <circle cx="-70" cy="-25" r="4" fill="#3F51B5" class="dj-light" />
+                                <circle cx="-60" cy="-25" r="4" fill="#4CAF50" class="dj-light" />
+                                <circle cx="60" cy="-25" r="4" fill="#FF9800" class="dj-light" />
+                                <circle cx="70" cy="-25" r="4" fill="#9C27B0" class="dj-light" />
+                                <circle cx="80" cy="-25" r="4" fill="#F44336" class="dj-light" />
+                            </g>
                             
-                            <path d="M450,100 Q430,80 420,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
-                            <circle cx="420" cy="100" r="5" fill="#fff" class="note" />
-                        </g>
-                    </svg>
+                            <!-- DJ Figure -->
+                            <g class="dj-figure" transform="translate(300, 150)">
+                                <!-- Head with headphones -->
+                                <circle cx="0" cy="0" r="20" fill="#444" />
+                                <path d="M-25 -5 Q-30 -20, -20 -20 L-5 -20 Q0 -25, 5 -20 L20 -20 Q30 -20, 25 -5" fill="#FF1A47" class="headphones" />
+                                
+                                <!-- Upper body -->
+                                <rect x="-15" y="20" width="30" height="40" rx="5" fill="#333" />
+                                
+                                <!-- Arms -->
+                                <g class="dj-arms">
+                                    <path d="M-15,30 C-40,20 -50,40 -45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
+                                    <path d="M15,30 C40,20 50,40 45,60" stroke="#333" stroke-width="8" fill="transparent" class="dj-arm" />
+                                </g>
+                                
+                                <!-- Hands on equipment -->
+                                <circle cx="-45" cy="60" r="6" fill="#444" class="dj-hand" />
+                                <circle cx="45" cy="60" r="6" fill="#444" class="dj-hand" />
+                            </g>
+                            
+                            <!-- Sound waves emanating from speakers -->
+                            <g class="sound-waves">
+                                <path d="M80,140 Q100,160 80,180 Q60,200 80,220 Q100,240 80,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="left-wave" />
+                                <path d="M80,150 Q110,180 80,210 Q50,240 80,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="left-wave" />
+                                
+                                <path d="M520,140 Q500,160 520,180 Q540,200 520,220 Q500,240 520,260" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.5" class="right-wave" />
+                                <path d="M520,150 Q490,180 520,210 Q550,240 520,270" stroke="#FF1A47" stroke-width="2" fill="none" opacity="0.3" class="right-wave" />
+                            </g>
+                            
+                            <!-- Music notes -->
+                            <g class="music-notes">
+                                <path d="M150,100 Q170,80 180,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
+                                <circle cx="180" cy="100" r="5" fill="#fff" class="note" />
+                                
+                                <path d="M450,100 Q430,80 420,100" stroke="#fff" fill="transparent" stroke-width="2" class="note" />
+                                <circle cx="420" cy="100" r="5" fill="#fff" class="note" />
+                            </g>
+                        </svg>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Features Section -->
+    <!-- Core Use Cases -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Core Features</h2>
-            
-            <!-- For Party Hosts -->
-            <div class="feature-category">
-                <h3 class="feature-category-title">🎯 For Party Hosts</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-calendar-plus"></i>
-                        </div>
-                        <h4>Create & Monetize Events</h4>
-                        <p>Set pricing, guest limits, and earn 80% revenue from your parties</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-check"></i>
-                        </div>
-                        <h4>Smart Guest Management</h4>
-                        <p>Approve/deny requests with intro messages and maintain control</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h4>Real-time Chat</h4>
-                        <p>Engage with guests before and during events</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Earnings Dashboard</h4>
-                        <p>Track income and party analytics in real-time</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Location Control</h4>
-                        <p>Set radius-based discovery zones for your events</p>
-                    </div>
+            <h2 class="section-title">Core Use Cases</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                    <h4>House Parties</h4>
+                    <p>Curate the vibe, approve requests, and host safely.</p>
                 </div>
-            </div>
-
-            <!-- For Party Guests -->
-            <div class="feature-category">
-                <h3 class="feature-category-title">🎉 For Party Guests</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-search-location"></i>
-                        </div>
-                        <h4>Discover Local Events</h4>
-                        <p>Find parties by vibe, price, and proximity to your location</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <h4>Secure Payment Processing</h4>
-                        <p>Pay only after host approval with encrypted transactions</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-secret"></i>
-                        </div>
-                        <h4>Anonymous Networking</h4>
-                        <p>Connect through numbered guest system for privacy</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-paper-plane"></i>
-                        </div>
-                        <h4>Request-to-Join System</h4>
-                        <p>Send personalized intro messages to hosts</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-broadcast-tower"></i>
-                        </div>
-                        <h4>Live Party Updates</h4>
-                        <p>Real-time guest count and chat access</p>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dice-d20"></i></div>
+                    <h4>DnD Campaigns</h4>
+                    <p>Dungeon Masters can monetize time and world‑building.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tv"></i></div>
+                    <h4>Watch Parties</h4>
+                    <p>Stream sports or Love Island at home—skip expensive bars.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-music"></i></div>
+                    <h4>DJ Sessions</h4>
+                    <p>Test new tracks, build community, earn for your sets.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-university"></i></div>
+                    <h4>Campus/Community Meetups</h4>
+                    <p>Study groups, club nights, and socials.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Pop‑up Experiences</h4>
+                    <p>Tastings, open mics, creative jams—make it yours.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Payment Processing Section -->
+    <!-- Host Monetization -->
+    <section class="business-info" id="monetization">
+        <div class="container">
+            <h2 class="section-title">Monetize your time and space</h2>
+            <div class="business-details">
+                <div class="business-card"><h3>Set your price and guest limit</h3></div>
+                <div class="business-card"><h3>Approve/deny guest requests with intro messages</h3></div>
+                <div class="business-card"><h3>Guests pay you directly (Cash App, Venmo, PayPal, etc.)</h3><p>Bondfyr doesn’t take a cut on guest→host payments</p></div>
+                <div class="business-card"><h3>Pay a small listing fee to publish events</h3><p>Processed securely via Dodo Payments</p></div>
+                <div class="business-card"><h3>Real‑time guest list and chat</h3><p>Run a smooth event end‑to‑end</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment & Security (small) -->
     <section class="payment-security" id="payment-security">
         <div class="container">
-            <h2 class="section-title">💳 Secure & Transparent Payment System</h2>
-            <p class="section-subtitle">Critical for Business Verification</p>
-            
-            <div class="payment-flow">
-                <h3>Our Payment Flow:</h3>
-                <div class="flow-steps">
-                    <div class="flow-step">
-                        <div class="step-number">1</div>
-                        <h4>Browse & Request</h4>
-                        <p>Discover parties and submit join requests (FREE)</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="step-number">2</div>
-                        <h4>Host Approval</h4>
-                        <p>Hosts review requests and approve guests</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="step-number">3</div>
-                        <h4>Secure Payment</h4>
-                        <p>Only pay after approval via encrypted payment gateway</p>
-                    </div>
-                    <div class="flow-step">
-                        <div class="step-number">4</div>
-                        <h4>Instant Access</h4>
-                        <p>Join party chat and get location details immediately</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="payment-features">
-                <div class="payment-column">
-                    <h3>Payment Security:</h3>
-                    <ul class="security-list">
-                        <li><i class="fas fa-check-circle"></i> <strong>PCI-DSS Compliant</strong> payment processing via Dodo Payments</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Encrypted transactions</strong> with industry-standard security</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>No upfront payments</strong> - pay only after host approval</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Automatic refunds</strong> for cancelled events</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Fraud protection</strong> and dispute resolution</li>
-                    </ul>
-                </div>
-                
-                <div class="payment-column">
-                    <h3>Revenue Model:</h3>
-                    <ul class="revenue-list">
-                        <li><i class="fas fa-dollar-sign"></i> <strong>Host Earnings:</strong> 80% of ticket price goes directly to hosts</li>
-                        <li><i class="fas fa-dollar-sign"></i> <strong>Platform Fee:</strong> 20% covers payment processing, security, and platform maintenance</li>
-                        <li><i class="fas fa-dollar-sign"></i> <strong>No Hidden Fees:</strong> Transparent pricing displayed upfront</li>
-                        <li><i class="fas fa-dollar-sign"></i> <strong>Instant Payouts:</strong> Hosts receive earnings within 24-48 hours</li>
-                    </ul>
-                </div>
-            </div>
+            <h2 class="section-title">Secure listing fees with Dodo Payments</h2>
+            <ul class="security-list">
+                <li><i class="fas fa-check-circle"></i> PCI‑DSS compliant processing</li>
+                <li><i class="fas fa-check-circle"></i> Encrypted transactions and fraud controls</li>
+                <li><i class="fas fa-check-circle"></i> We process host listing fees to publish events; guest→host ticket payments happen off‑platform between users</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Trust & Safety Section -->
-    <section class="trust-safety">
-        <div class="container">
-            <h2 class="section-title">🛡️ Built for Safe Social Connections</h2>
-            <div class="safety-grid">
-                <div class="safety-card">
-                    <i class="fas fa-user-shield"></i>
-                    <h4>Host Screening</h4>
-                    <p>Party creators must provide valid location details</p>
-                </div>
-                <div class="safety-card">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h4>Guest Approval System</h4>
-                    <p>Hosts control who attends their events</p>
-                </div>
-                <div class="safety-card">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h4>Community Guidelines</h4>
-                    <p>Zero tolerance for harassment or unsafe behavior</p>
-                </div>
-                <div class="safety-card">
-                    <i class="fas fa-headset"></i>
-                    <h4>24/7 Support</h4>
-                    <p>Report issues anytime via in-app support system</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
+    <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">🏙️ How It Works</h2>
-            
-            <div class="how-it-works-tabs">
-                <button class="tab-button active" data-tab="hosts">For Hosts</button>
-                <button class="tab-button" data-tab="guests">For Guests</button>
-            </div>
-
-            <div class="tab-content active" id="hosts">
-                <h3>For Hosts:</h3>
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-icon">1</div>
-                        <h4>Create Your Party</h4>
-                        <p>Add title, description, pricing, guest limit, and vibe tags</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">2</div>
-                        <h4>Set Your Space</h4>
-                        <p>Define location and discovery radius</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">3</div>
-                        <h4>Review Requests</h4>
-                        <p>See guest intro messages and approve attendees</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">4</div>
-                        <h4>Host & Earn</h4>
-                        <p>Run your party and earn 80% of ticket sales</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">5</div>
-                        <h4>Get Paid</h4>
-                        <p>Receive earnings automatically after event completion</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-content" id="guests">
-                <h3>For Guests:</h3>
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-icon">1</div>
-                        <h4>Discover Events</h4>
-                        <p>Browse parties by location, price, and vibe</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">2</div>
-                        <h4>Request Access</h4>
-                        <p>Send intro message explaining why you'd be a great guest</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">3</div>
-                        <h4>Get Approved</h4>
-                        <p>Wait for host approval (usually within hours)</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">4</div>
-                        <h4>Pay Securely</h4>
-                        <p>Complete payment only after approval</p>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-icon">5</div>
-                        <h4>Join & Connect</h4>
-                        <p>Access party chat and get location details</p>
-                    </div>
-                </div>
+            <h2 class="section-title">How Bondfyr works</h2>
+            <div class="steps-grid">
+                <div class="step-card"><div class="step-icon">1</div><h4>Create your event</h4><p>Title, vibe, price, capacity, location radius</p></div>
+                <div class="step-card"><div class="step-icon">2</div><h4>Requests roll in</h4><p>Guests apply with a short intro</p></div>
+                <div class="step-card"><div class="step-icon">3</div><h4>Approve the right crowd</h4><p>Keep your event safe and on vibe</p></div>
+                <div class="step-card"><div class="step-icon">4</div><h4>Payments</h4><p>Hosts pay a small listing fee via Dodo Payments. Approved guests then pay hosts directly off‑platform.</p></div>
+                <div class="step-card"><div class="step-icon">5</div><h4>Host & connect</h4><p>Chat, manage guests, and make memories</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Business Information Section -->
-    <section class="business-info" id="business-info">
+    <!-- Safety & Trust -->
+    <section class="trust-safety" id="safety">
         <div class="container">
-            <h2 class="section-title">📊 About Bondfyr Inc.</h2>
-            <p class="section-subtitle">For Verification</p>
-            
-            <div class="business-details">
-                <div class="business-card">
-                    <h3>Business Model</h3>
-                    <p>Two-sided marketplace for social event discovery and hosting</p>
-                </div>
-                <div class="business-card">
-                    <h3>Revenue Streams</h3>
-                    <p>20% transaction fee on successful party bookings</p>
-                </div>
-                <div class="business-card">
-                    <h3>Target Market</h3>
-                    <p>Young adults seeking authentic social connections and experiences</p>
-                </div>
+            <h2 class="section-title">Safety, by design</h2>
+            <div class="safety-grid">
+                <div class="safety-card"><i class="fas fa-user-check"></i><h4>Request‑to‑join approval</h4><p>Hosts control who attends</p></div>
+                <div class="safety-card"><i class="fas fa-id-card"></i><h4>Profiles with community signals</h4><p>Context to pick the right guests</p></div>
+                <div class="safety-card"><i class="fas fa-comments"></i><h4>Event‑level chat</h4><p>Anonymous guest numbering</p></div>
+                <div class="safety-card"><i class="fas fa-user-secret"></i><h4>Location privacy</h4><p>Radius‑based discovery</p></div>
+                <div class="safety-card"><i class="fas fa-shield-alt"></i><h4>Guidelines & reporting</h4><p>Community‑first safety</p></div>
             </div>
         </div>
     </section>
 
-    <!-- App Features Section -->
-    <section class="app-features">
+    <!-- Features (condensed) -->
+    <section class="app-features" id="tools">
         <div class="container">
-            <h2 class="section-title">📱 Comprehensive Social Platform</h2>
+            <h2 class="section-title">Tools that help you host</h2>
             <div class="app-features-grid">
-                <div class="app-feature">
-                    <i class="fas fa-comments"></i>
-                    <h4>Real-time Messaging</h4>
-                    <p>Party-specific chat rooms with anonymous guest numbering</p>
-                </div>
-                <div class="app-feature">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <h4>Location Services</h4>
-                    <p>GPS-based party discovery with privacy controls</p>
-                </div>
-                <div class="app-feature">
-                    <i class="fas fa-user-cog"></i>
-                    <h4>Profile Management</h4>
-                    <p>Customizable profiles with social media integration</p>
-                </div>
-                <div class="app-feature">
-                    <i class="fas fa-bell"></i>
-                    <h4>Push Notifications</h4>
-                    <p>Instant updates on approvals, payments, and party news</p>
-                </div>
-                <div class="app-feature">
-                    <i class="fas fa-share-alt"></i>
-                    <h4>Social Sharing</h4>
-                    <p>Share favorite parties with friends seamlessly</p>
-                </div>
+                <div class="app-feature"><i class="fas fa-bolt"></i><h4>Fast event creation</h4><p>Publish in minutes</p></div>
+                <div class="app-feature"><i class="fas fa-users-cog"></i><h4>Smart guest management</h4><p>Approve with intros</p></div>
+                <div class="app-feature"><i class="fas fa-comment-dots"></i><h4>Event chat & updates</h4><p>Keep everyone aligned</p></div>
+                <div class="app-feature"><i class="fas fa-hand-holding-usd"></i><h4>Host tips (coming soon)</h4><p>Earn more for great experiences</p></div>
             </div>
+        </div>
+    </section>
+
+    <!-- Join Waitlist -->
+    <section class="contact" id="waitlist">
+        <div class="container">
+            <h2 class="section-title">Be first to new drops and features</h2>
+            <p class="download-description">Join the waitlist for priority access, city rollouts, and creator tools.</p>
+            <form id="waitlist-form" class="waitlist-form" aria-label="Join waitlist form">
+                <input type="text" name="company" class="hp" autocomplete="off" tabindex="-1" aria-hidden="true">
+                <div class="form-row">
+                    <input type="text" id="wl-name" placeholder="Name (optional)" aria-label="Your name">
+                    <input type="email" id="wl-email" placeholder="you@email.com" aria-label="Your email" required>
+                </div>
+                <button type="submit" id="wl-submit" class="btn-primary">Join Waitlist</button>
+                <p id="wl-success" class="success" style="display:none;">You’re on the list. We’ll email you when Bondfyr launches in your city.</p>
+                <p id="wl-error" class="error" style="display:none;">Please try again in a moment.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="legal-pages" id="faq">
+        <div class="container">
+            <h2 class="section-title">FAQ</h2>
+            <div class="legal-section"><h4>Do you take a cut from ticket sales?</h4><p>No. Guests pay hosts directly; Bondfyr doesn’t handle those transactions.</p></div>
+            <div class="legal-section"><h4>What payments do you process?</h4><p>We securely process host listing fees via Dodo Payments to publish events.</p></div>
+            <div class="legal-section"><h4>Is it only for house parties?</h4><p>No—use Bondfyr for DnD nights, watch parties, DJ sessions, study groups, and more.</p></div>
+            <div class="legal-section"><h4>How do you keep events safe?</h4><p>Hosts approve requests with intros, plus guidelines, chat tools, and reporting.</p></div>
         </div>
     </section>
 
@@ -513,7 +340,7 @@
                 <div class="legal-section">
                     <h4>Data Security</h4>
                     <p>We implement industry-standard security measures to protect your personal information. Your data is stored securely and access is limited to authorized personnel only.</p>
-                </div>
+                    </div>
 
                 <div class="legal-section">
                     <h4>Payment Information</h4>
@@ -534,7 +361,7 @@
                         <li><strong>Refunds:</strong> Refunds are issued for cancelled events according to our refund policy</li>
                         <li><strong>Payout Schedule:</strong> Host earnings are processed within 24-48 hours after event completion</li>
                     </ul>
-                </div>
+                    </div>
 
                 <div class="legal-section">
                     <h4>Legal Responsibility</h4>
@@ -544,7 +371,7 @@
                 <div class="legal-section">
                     <h4>Code of Conduct</h4>
                     <p>Users must behave respectfully when using our platform and attending events. Harassment, discrimination, or illegal activities are strictly prohibited.</p>
-                </div>
+                    </div>
 
                 <div class="legal-section">
                     <h4>Limitation of Liability</h4>
@@ -574,17 +401,17 @@
                     <i class="fas fa-newspaper"></i>
                     <h4>Press</h4>
                     <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
-                </div>
+                    </div>
                 <div class="contact-card">
                     <i class="fas fa-handshake"></i>
                     <h4>Partnerships</h4>
                     <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
-                </div>
+                    </div>
                 <div class="contact-card">
                     <i class="fas fa-shield-alt"></i>
                     <h4>Privacy</h4>
                     <a href="mailto:karjunvarma2001@gmail.com">karjunvarma2001@gmail.com</a>
-                </div>
+                    </div>
                 <div class="contact-card">
                     <i class="fas fa-gavel"></i>
                     <h4>Legal</h4>
@@ -603,27 +430,22 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="images/bondfyr-logo-transparent.png" alt="Bondfyr Logo">
-                        <h3>Bondfyr</h3>
+                    <h3>Bondfyr</h3>
                     </div>
-                    <p>Connect. Party. Bond. The ultimate social event discovery platform.</p>
+                    <p>Connect. Host. Bond. Real‑world social events.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Platform</h4>
+                    <h4>Links</h4>
                     <ul>
                         <li><a href="#features">Features</a></li>
-                        <li><a href="#payment-security">Payment Security</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#business-info">Business Info</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
+                        <li><a href="#safety">Safety</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <li><a href="#legal">Privacy Policy</a></li>
                         <li><a href="#legal">Terms of Service</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
-                </div>
+                    </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>Email: karjunvarma2001@gmail.com</p>
@@ -631,7 +453,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Bondfyr Inc. All rights reserved. Professional business verification platform.</p>
+                <p>© 2025 Bondfyr Inc.</p>
             </div>
         </div>
     </footer>
