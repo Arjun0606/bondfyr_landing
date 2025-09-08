@@ -1,0 +1,9 @@
+{
+  "name": "bondfyr-landing",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/kv": "^1.0.1"
+  }
+}
