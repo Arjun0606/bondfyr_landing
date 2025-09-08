@@ -412,20 +412,20 @@ section {
 .safety-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
+        gap: 30px;
+    }
+    
 .safety-card {
     background: rgba(255, 255, 255, 0.05);
     padding: 30px;
     border-radius: 15px;
-    text-align: center;
+        text-align: center;
     border: 1px solid rgba(139, 92, 246, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .safety-card:hover {
-    transform: translateY(-5px);
+        transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
 }
 
@@ -559,7 +559,7 @@ section {
 }
 
 .business-card:hover {
-    transform: translateY(-5px);
+        transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
 }
 
@@ -833,7 +833,7 @@ section {
 .download-btn:hover {
     background: rgba(255, 26, 71, 0.2);
     border-color: #FF1A47;
-    transform: translateY(-3px);
+        transform: translateY(-3px);
 }
 
 .download-btn i {
@@ -1009,3 +1009,47 @@ footer {
         padding: 60px 0;
     }
 } 
+
+.cta-outline {
+    background: transparent;
+    color: var(--text-color) !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.cta-outline:hover {
+    background: var(--primary-color);
+}
+
+.launch-note {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* Waitlist form tweaks */
+.waitlist-form .form-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+.waitlist-form input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+}
+.waitlist-form .btn-primary {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 12px 18px;
+}
+.hp { display:none; }
+
+/* Nav spacing for outlined button */
+.nav-links .cta-outline { margin-left: 10px; } 

@@ -6,3 +6,9 @@
   to = "/.netlify/functions/waitlist"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/api/waitlist-export"
+  to = "/.netlify/functions/waitlist_export"
+  status = 200
+  force = true
