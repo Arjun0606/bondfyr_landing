@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "@vercel/kv": "^1.0.1",
     "@vercel/blob": "^0.21.0"
