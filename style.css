@@ -1053,3 +1053,7 @@ footer {
 
 /* Nav spacing for outlined button */
 .nav-links .cta-outline { margin-left: 10px; } 
+
+.hero-buttons .btn-primary i { font-size: 1.2rem; }
+.hero .launch-note a { color: #FF6B35; }
+@media (max-width: 768px) { .hero .launch-note { font-size: 0.9rem; } } 
